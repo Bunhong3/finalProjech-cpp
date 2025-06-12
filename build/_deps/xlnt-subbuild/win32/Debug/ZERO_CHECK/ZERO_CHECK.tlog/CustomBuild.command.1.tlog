@@ -1,0 +1,10 @@
+^D:\REAN\IT\MAIN PROJECT-FINAL\TEST\FINAL_DESTINATION\BUILD\_DEPS\XLNT-SUBBUILD\CMAKEFILES\23484D907B9279D5C015C6C21E0D5562\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-subbuild" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-subbuild" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-subbuild/xlnt-populate.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

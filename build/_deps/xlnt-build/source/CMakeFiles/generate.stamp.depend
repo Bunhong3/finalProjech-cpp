@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.22/Modules/BasicConfigVersion-ExactVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/WriteBasicConfigVersionFile.cmake
+D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/cmake/XlntConfig.cmake.in
+D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/cmake/cmake_uninstall.cmake.in
+D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/source/CMakeLists.txt

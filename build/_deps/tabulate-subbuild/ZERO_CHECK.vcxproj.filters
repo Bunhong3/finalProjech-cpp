@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\tabulate-subbuild\CMakeFiles\084de0a08332c4c2e0688fca2d1f69a6\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2DD64265-BE2A-3D58-B93B-30ADAF9D61DD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

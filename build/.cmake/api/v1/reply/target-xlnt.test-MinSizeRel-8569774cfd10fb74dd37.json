@@ -1,0 +1,547 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/xlnt-build/tests/MinSizeRel/xlnt.test.exe"
+		},
+		{
+			"path" : "_deps/xlnt-build/tests/MinSizeRel/xlnt.test.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_custom_command",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 46,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 55,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
+				},
+				{
+					"fragment" : "/wd\"4068\" /bigobj"
+				},
+				{
+					"fragment" : "-std:c++14"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/../source"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/../third-party/libstudxml"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/../third-party/miniz"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/source/../include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				32
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "xlnt::@874320f2c4e182ab03bd"
+		},
+		{
+			"id" : "libstudxml::@adc904478183145f15fa"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "xlnt.test::@73de1063b4707d31eeab",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:X86 /INCREMENTAL:NO /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "..\\source\\MinSizeRel\\xlnt.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "xlnt.test",
+	"nameOnDisk" : "xlnt.test.exe",
+	"paths" : 
+	{
+		"build" : "_deps/xlnt-build/tests",
+		"source" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "runner",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "tests\\cell",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"name" : "tests\\drawing",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		},
+		{
+			"name" : "tests\\detail",
+			"sourceIndexes" : 
+			[
+				5
+			]
+		},
+		{
+			"name" : "tests\\styles",
+			"sourceIndexes" : 
+			[
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
+		},
+		{
+			"name" : "tests\\utils",
+			"sourceIndexes" : 
+			[
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			]
+		},
+		{
+			"name" : "tests\\workbook",
+			"sourceIndexes" : 
+			[
+				19,
+				20,
+				21
+			]
+		},
+		{
+			"name" : "tests\\worksheet",
+			"sourceIndexes" : 
+			[
+				22,
+				23,
+				24
+			]
+		},
+		{
+			"name" : "helpers",
+			"sourceIndexes" : 
+			[
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/runner.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/cell/cell_test_suite.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/cell/index_types_test_suite.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/cell/rich_text_test_suite.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/drawing/drawing_test_suite.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/detail/numeric_util_test_suite.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/alignment_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/color_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/conditional_format_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/fill_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/number_format_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/protection_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/styles/style_test_suite.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/utils/datetime_test_suite.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/utils/helper_test_suite.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/utils/optional_tests.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/utils/path_test_suite.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/utils/timedelta_test_suite.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/utils/variant_tests.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/workbook/named_range_test_suite.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/workbook/serialization_test_suite.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/workbook/workbook_test_suite.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/worksheet/page_setup_test_suite.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/worksheet/range_test_suite.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/worksheet/worksheet_test_suite.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/assertions.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/path_helper.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/temporary_directory.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/temporary_file.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/test_suite.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/timing.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/xml_helper.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/helpers/test_suite.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/parser.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/qname.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/serializer.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/value-traits.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/char-props.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/genx.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/xmlparse.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/xmlrole.obj",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/libstudxml.dir/$(Configuration)/xmltok.obj",
+			"sourceGroupIndex" : 9
+		}
+	],
+	"type" : "EXECUTABLE"
+}

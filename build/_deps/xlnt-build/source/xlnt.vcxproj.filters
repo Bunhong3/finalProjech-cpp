@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\cell.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\cell_reference.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\comment.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\hyperlink.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\index_types.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\phonetic_run.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\rich_text.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\cell\rich_text_run.cpp">
+      <Filter>cell</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\drawing\spreadsheet_drawing.cpp">
+      <Filter>drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\packaging\ext_list.cpp">
+      <Filter>packaging</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\packaging\manifest.cpp">
+      <Filter>packaging</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\packaging\relationship.cpp">
+      <Filter>packaging</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\packaging\uri.cpp">
+      <Filter>packaging</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\alignment.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\border.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\color.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\conditional_format.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\fill.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\font.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\format.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\number_format.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\protection.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\styles\style.cpp">
+      <Filter>styles</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\date.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\datetime.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\exceptions.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\path.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\time.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\timedelta.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\utils\variant.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\workbook\named_range.cpp">
+      <Filter>workbook</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\workbook\streaming_workbook_reader.cpp">
+      <Filter>workbook</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\workbook\streaming_workbook_writer.cpp">
+      <Filter>workbook</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\workbook\workbook.cpp">
+      <Filter>workbook</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\workbook\worksheet_iterator.cpp">
+      <Filter>workbook</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\cell_iterator.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\cell_vector.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\header_footer.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\page_margins.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\page_setup.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\phonetic_pr.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\range.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\range_iterator.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\range_reference.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\sheet_protection.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\worksheet\worksheet.cpp">
+      <Filter>worksheet</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\constants.cpp">
+      <Filter>detail</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\unicode.cpp">
+      <Filter>detail</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\aes.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\base64.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\compound_document.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\encryption_info.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\hash.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\sha.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\sha1.c">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\sha512.c">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\xlsx_crypto_consumer.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\xlsx_crypto_producer.cpp">
+      <Filter>detail\cryptography</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\header_footer\header_footer_code.cpp">
+      <Filter>detail\header_footer</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\cell_impl.cpp">
+      <Filter>detail\implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\number_format\number_formatter.cpp">
+      <Filter>detail\number_format</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\custom_value_traits.cpp">
+      <Filter>detail\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\open_stream.cpp">
+      <Filter>detail\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\vector_streambuf.cpp">
+      <Filter>detail\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\xlsx_consumer.cpp">
+      <Filter>detail\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\xlsx_producer.cpp">
+      <Filter>detail\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\zstream.cpp">
+      <Filter>detail\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\miniz\miniz.c">
+      <Filter>third-party\miniz</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\xlnt.hpp">
+      <Filter>xlnt</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\xlnt_config.hpp">
+      <Filter>xlnt</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\cell.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\cell_reference.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\cell_type.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\comment.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\hyperlink.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\index_types.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\phonetic_run.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\rich_text.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\cell\rich_text_run.hpp">
+      <Filter>cell</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\drawing\spreadsheet_drawing.hpp">
+      <Filter>drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\packaging\ext_list.hpp">
+      <Filter>packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\packaging\manifest.hpp">
+      <Filter>packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\packaging\relationship.hpp">
+      <Filter>packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\packaging\uri.hpp">
+      <Filter>packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\alignment.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\border.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\color.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\conditional_format.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\fill.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\font.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\format.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\number_format.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\protection.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\styles\style.hpp">
+      <Filter>styles</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\calendar.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\date.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\datetime.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\exceptions.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\numeric.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\optional.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\path.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\scoped_enum_hash.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\time.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\timedelta.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\utils\variant.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\calculation_properties.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\document_security.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\external_book.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\metadata_property.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\named_range.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\streaming_workbook_reader.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\streaming_workbook_writer.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\theme.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\workbook.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\workbook_view.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\workbook\worksheet_iterator.hpp">
+      <Filter>workbook</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\cell_iterator.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\cell_vector.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\column_properties.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\header_footer.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\major_order.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\page_margins.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\page_setup.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\pane.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\phonetic_pr.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\print_options.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\range.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\range_iterator.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\range_reference.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\row_properties.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\selection.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\sheet_format_properties.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\sheet_pr.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\sheet_protection.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\sheet_view.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\include\xlnt\worksheet\worksheet.hpp">
+      <Filter>worksheet</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\binary.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\constants.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\default_case.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\unicode.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\aes.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\base64.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\cipher.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\compound_document.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\encryption_info.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\hash.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\sha.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\value_traits.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\xlsx_crypto_consumer.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\cryptography\xlsx_crypto_producer.hpp">
+      <Filter>detail\cryptography</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\external\include_libstudxml.hpp">
+      <Filter>detail\external</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\external\include_windows.hpp">
+      <Filter>detail\external</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\header_footer\header_footer_code.hpp">
+      <Filter>detail\header_footer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\cell_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\conditional_format_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\format_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\formatting_record.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\hyperlink_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\style_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\stylesheet.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\workbook_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\implementations\worksheet_impl.hpp">
+      <Filter>detail\implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\number_format\number_formatter.hpp">
+      <Filter>detail\number_format</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\custom_value_traits.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\excel_thumbnail.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\open_stream.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\vector_streambuf.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\xlsx_consumer.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\xlsx_producer.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\detail\serialization\zstream.hpp">
+      <Filter>detail\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\miniz\miniz.h">
+      <Filter>third-party\miniz</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\parser.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\qname.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\serializer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\value-traits.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\char-props.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\genx.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlparse.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlrole.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmltok.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{3627F7BC-6345-344A-82A8-6067FEB0C8F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cell">
+      <UniqueIdentifier>{D775B61D-4542-359D-BE66-DD90583857CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail">
+      <UniqueIdentifier>{C75FF0F8-9FBE-34C0-A3CD-CD5B089060A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail\cryptography">
+      <UniqueIdentifier>{9057A568-5EB1-3B80-A40A-8BF1B98BBD3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail\external">
+      <UniqueIdentifier>{83E7E2EC-CEDF-39DA-80E8-335DBF390BBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail\header_footer">
+      <UniqueIdentifier>{B7D3D3AA-2D32-3851-90E3-9F459BEEA690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail\implementations">
+      <UniqueIdentifier>{5DA1E113-558D-3A43-8E1D-A7F0A40BF0E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail\number_format">
+      <UniqueIdentifier>{A5E7BA74-2C3B-3A0F-8304-4D902924479F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail\serialization">
+      <UniqueIdentifier>{434338DE-1EBD-3A54-A48E-D34077DF768C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="drawing">
+      <UniqueIdentifier>{A9781055-5260-3126-8065-6FE138F25D41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packaging">
+      <UniqueIdentifier>{4806E611-C4AD-3284-A265-55C43B1F4642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="styles">
+      <UniqueIdentifier>{CC39F97B-621D-3563-B1CB-797647E99A8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third-party">
+      <UniqueIdentifier>{89D22D51-AEC2-3C22-83BB-E1AED65FB28C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third-party\miniz">
+      <UniqueIdentifier>{79B42F88-93AA-34C2-BD87-AA78293CDF82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{0EF9653D-DD14-35D4-BEE8-4B582940FC89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="workbook">
+      <UniqueIdentifier>{BF589BA1-9EE1-3620-A5BC-671AD4287C15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="worksheet">
+      <UniqueIdentifier>{5A713057-389C-3834-98D7-721432FA9E4E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xlnt">
+      <UniqueIdentifier>{8DAD3FF3-4305-3BF1-996E-F396A211812B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

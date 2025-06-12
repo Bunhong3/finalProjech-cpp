@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EAE543E3-4B35-3B48-8FBA-D30AAB57DDD0}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>win32</Platform>
+    <ProjectName>xlnt.test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">xlnt.test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">xlnt.test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">xlnt.test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">xlnt.test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">xlnt.test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">xlnt.test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">xlnt.test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">xlnt.test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4068</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/Debug/xlntd.dll" "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\source\Debug\xlntd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/Debug/xlnt.test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/Debug/xlnt.test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4068</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/Release/xlnt.dll" "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/Release"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\source\Release\xlnt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/Release/xlnt.test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/Release/xlnt.test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4068</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/MinSizeRel/xlnt.dll" "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/MinSizeRel"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\source\MinSizeRel\xlnt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/MinSizeRel/xlnt.test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/MinSizeRel/xlnt.test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4068</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;XLNT_TEST_DATA_DIR=D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/data;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\source;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\libstudxml;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\..\third-party\miniz;D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/RelWithDebInfo/xlnt.dll" "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/RelWithDebInfo"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\source\RelWithDebInfo\xlnt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/RelWithDebInfo/xlnt.test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/RelWithDebInfo/xlnt.test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/tests/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/tests/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\tests\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\runner.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\cell\cell_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\cell\index_types_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\cell\rich_text_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\drawing\drawing_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\detail\numeric_util_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\alignment_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\color_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\conditional_format_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\fill_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\number_format_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\protection_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\style_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\datetime_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\helper_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\optional_tests.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\path_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\timedelta_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\variant_tests.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\workbook\named_range_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\workbook\serialization_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\workbook\workbook_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\worksheet\page_setup_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\worksheet\range_test_suite.cpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\worksheet\worksheet_test_suite.cpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\assertions.hpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\path_helper.hpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\temporary_directory.hpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\temporary_file.hpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\test_suite.hpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\timing.hpp" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\xml_helper.hpp" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\test_suite.cpp" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\parser.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\qname.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\serializer.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\value-traits.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\char-props.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\genx.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlparse.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlrole.obj" />
+    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmltok.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\ZERO_CHECK.vcxproj">
+      <Project>{AB686B47-91AF-346D-8DE5-DB1E133FA995}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.vcxproj">
+      <Project>{E34FE782-EEB9-31FA-B474-35AFFAB58D38}</Project>
+      <Name>libstudxml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\xlnt.vcxproj">
+      <Project>{6004683E-023B-3054-9D52-C711F986904E}</Project>
+      <Name>xlnt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
