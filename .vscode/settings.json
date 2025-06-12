@@ -6,6 +6,8 @@
         "random": "cpp",
         "chrono": "cpp",
         "format": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "string": "cpp",
+        "xstring": "cpp"
     }
 }

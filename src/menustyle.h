@@ -8,7 +8,9 @@ void pressEnter()
 {
     cout << bold_magenta(">> Press Enter to Coutinue : ");
     cin.ignore();
+    cin.get();
 }
+
 // printHeader
 void printtHeader(const string &title)
 {
@@ -47,6 +49,8 @@ void printHeaderStyle4(const string &title)
     cout << bottom << "\033[0m\n\n";
 }
 
+
+
 // >> main Menu
 void menuMain()
 {
@@ -79,6 +83,9 @@ void menuMain()
     cout << t << endl;
     cout << bold_blue(">> Enter choice: ");
 }
+
+
+
 // Process Management  
 void menuPM()
 {
@@ -107,6 +114,8 @@ void menuPM()
     cout << bold_blue(">> Enter choice: ");
 }
 
+
+
 // Resource Management
 void menuRM()
 {
@@ -134,4 +143,181 @@ void menuRM()
     cout << t << endl;
     cout << bold_blue(">> Enter choice: ");
 }
+
+
+// Time Management  
+void menuTM()
+{
+    vector<string> menuMain = {
+        "Record Employee Attendance",
+        "Track Work Hours or Shifts",
+        "Manage Leave Balances",
+        "Back to Main Menu"};
+    Table t;
+    t.add_row({"No", "Menu"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 1), menuMain[i]});
+    }
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 4) // Exit option
+            t[i][1].format().font_color(Color::red);
+        else
+            t[i][1].format().font_color(Color::cyan);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+}
+
+
+
+//  Client Relationship Management
+void menuCRM()
+{
+    vector<string> menuMain = {
+        "Add Client Record",
+        "Assign Employees to Clients/Accounts",
+        "Track Client-Specific Projects or Contacts",
+        "View All Clients",
+        "Back to Main Menu"};
+    Table t;
+    t.add_row({"No", "Menu"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 1), menuMain[i]});
+    }
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 5) // Exit option
+            t[i][1].format().font_color(Color::red);
+        else
+            t[i][1].format().font_color(Color::cyan);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+}
+
+
+
+// Project Management 
+void menuPMM()
+{
+    vector<string> menuMain = {
+        "Create Project",
+        "Assign Employees to Projects",
+        "Track Project Deadlines",
+        "View Employees Assigned to Projects",
+        "Back to Main Menu"};
+    Table t;
+    t.add_row({"No", "Menu"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 1), menuMain[i]});
+    }
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 5) // Exit option
+            t[i][1].format().font_color(Color::red);
+        else
+            t[i][1].format().font_color(Color::cyan);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+}
+
+
+// businessIntelligence
+void menuBI()
+{
+    vector<string> menuMain = {
+        "Count Total Employees",
+        "Department-wise Employee Statistics",
+        "Average, Max, and Min Salaries",
+        "Sort Employees",
+        "Back to Main Menu"};
+    Table t;
+    t.add_row({"No", "Menu"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 1), menuMain[i]});
+    }
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 5) // Exit option
+            t[i][1].format().font_color(Color::red);
+        else
+            t[i][1].format().font_color(Color::cyan);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+} 
+
+
+
+// Base System Features
+void menuBF()
+{
+    vector<string> menuMain = {
+        "Display All Employees",
+        "Display One Employee by ID",
+        "Search Employees",
+        "Save System Data",
+        "Load System Data",
+        "Back to Main Menu"};
+    Table t;
+    t.add_row({"No", "Menu"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 1), menuMain[i]});
+    }
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 6) // Exit option
+            t[i][1].format().font_color(Color::red);
+        else
+            t[i][1].format().font_color(Color::cyan);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+} 
+
+
+
+//  User Management
+void menuUM()
+{
+    vector<string> menuMain = {
+        "Add New User",
+        "Manage User Roles and Credentials",
+        "Back to Main Menu"};
+    Table t;
+    t.add_row({"No", "Menu"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 1), menuMain[i]});
+    }
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 3) // Exit option
+            t[i][1].format().font_color(Color::red);
+        else
+            t[i][1].format().font_color(Color::cyan);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+} 
+
 #endif
