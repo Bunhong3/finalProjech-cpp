@@ -1738,13 +1738,20 @@ public:
             switch (choice)
             {
             case 1:
+                system("cls");
+                printHeaderStyle1("Record Employee Attendance");
                 timeManagement.recordEmployeeAttendance(currentUser);
+                pressEnter();
                 break;
             case 2:
+                printHeaderStyle1("Track Work Hours or Shifts");
                 timeManagement.trackWorkHoursOrShifts(currentUser);
+                pressEnter();
                 break;
             case 3:
+                printHeaderStyle1("Manage Leave Balances");
                 timeManagement.manageLeaveBalances(currentUser);
+                pressEnter();
                 break;
             case 4:
                 break;
@@ -1766,16 +1773,28 @@ public:
             switch (choice)
             {
             case 1:
+                system("cls");
+                printHeaderStyle1("Add Client Record");
                 clientRelationshipManagement.addClientRecord(currentUser);
+                pressEnter();
                 break;
             case 2:
+                system("cls");
+                printHeaderStyle1("Assign Employees to Clients/Accounts");
                 clientRelationshipManagement.assignEmployeesToClientsAccounts(currentUser);
+                pressEnter();
                 break;
             case 3:
+                system("cls");
+                printHeaderStyle1("Track Client-Specific Projects or Contacts");
                 clientRelationshipManagement.trackClientSpecificProjectsOrContacts(currentUser);
+                pressEnter();
                 break;
             case 4:
+                system("cls");
+                printHeaderStyle1("View All Clients");
                 clientRelationshipManagement.displayAllClients(currentUser);
+                pressEnter();
                 break; // New call
             case 5:
                 break;
@@ -1798,16 +1817,28 @@ public:
             switch (choice)
             {
             case 1:
+            system("cls");
+                printHeaderStyle1("Create Project");
                 projectManagement.createProject(currentUser);
+                pressEnter();
                 break;
             case 2:
+            system("cls");
+                printHeaderStyle1("Assign Employees to Projects");
                 projectManagement.assignEmployeesToProjects(currentUser);
+                pressEnter();
                 break;
             case 3:
+            system("cls");
+                printHeaderStyle1("Track Project Deadlines");
                 projectManagement.trackProjectDeadlines(currentUser);
+                pressEnter();
                 break;
             case 4:
+            system("cls");
+                printHeaderStyle1("View Employees Assigned to Projects");
                 projectManagement.viewEmployeesAssignedToProjects(currentUser);
+                pressEnter();
                 break;
             case 5:
                 break;
@@ -1830,16 +1861,28 @@ public:
             switch (choice)
             {
             case 1:
+            system("cls");
+                printHeaderStyle1("Count Total Employees");
                 businessIntelligence.countTotalEmployees(currentUser);
+                pressEnter();
                 break;
             case 2:
+            system("cls");
+                printHeaderStyle1("Department-wise Employee Statistics");
                 businessIntelligence.departmentWiseEmployeeStatistics(currentUser);
+                pressEnter();
                 break;
             case 3:
+            system("cls");
+                printHeaderStyle1("Average, Max, and Min Salaries");
                 businessIntelligence.calculateSalaryMetrics(currentUser);
+                pressEnter();
                 break;
             case 4:
+            system("cls");
+                printHeaderStyle1("Sort Employees");
                 businessIntelligence.sortEmployees(currentUser);
+                pressEnter();
                 break;
             case 5:
                 break;
@@ -1862,19 +1905,34 @@ public:
             switch (choice)
             {
             case 1:
+            system("cls");
+                printHeaderStyle1("Display All Employees");
                 employeeManagement.displayAllEmployees(currentUser);
+                pressEnter();
                 break;
             case 2:
+            system("cls");
+                printHeaderStyle1("Display One Employee by ID");
                 employeeManagement.displayOneEmployeeByID(currentUser);
+                pressEnter();
                 break;
             case 3:
+            system("cls");
+                printHeaderStyle1("Search Employees");
                 employeeManagement.searchEmployees(currentUser);
+                pressEnter();
                 break;
             case 4:
+            system("cls");
+                printHeaderStyle1("Save System Data");
                 saveSystemDataToFile("worker_data.txt");
+                pressEnter();
                 break; // Call save
             case 5:
+            system("cls");
+                printHeaderStyle1("Load System Data");
                 loadSystemDataFromFile("worker_data.txt");
+                pressEnter();
                 break; // Call load
             case 6:
                 break;
@@ -1897,10 +1955,16 @@ public:
             switch (choice)
             {
             case 1:
+            system("cls");
+                printHeaderStyle1("Add New User");
                 loginSystem.addUser(currentUser);
+                pressEnter();
                 break;
             case 2:
+            system("cls");
+                printHeaderStyle1("Manage User Roles and Credentials");
                 loginSystem.manageUserRolesAndCredentials(currentUser);
+                pressEnter();
                 break;
             case 3:
                 break;

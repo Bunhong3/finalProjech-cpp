@@ -148,11 +148,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 3,
-			"id" : "xlnt::@874320f2c4e182ab03bd"
+			"id" : "libstudxml::@adc904478183145f15fa"
 		},
 		{
-			"id" : "libstudxml::@adc904478183145f15fa"
+			"backtrace" : 3,
+			"id" : "xlnt::@874320f2c4e182ab03bd"
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"

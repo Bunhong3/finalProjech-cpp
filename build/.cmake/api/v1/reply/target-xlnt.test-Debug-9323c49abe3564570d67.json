@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/xlnt-build/tests/RelWithDebInfo/xlnt.test.exe"
+			"path" : "_deps/xlnt-build/tests/Debug/xlnt.test.exe"
 		},
 		{
-			"path" : "_deps/xlnt-build/tests/RelWithDebInfo/xlnt.test.pdb"
+			"path" : "_deps/xlnt-build/tests/Debug/xlnt.test.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -66,7 +66,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1"
 				},
 				{
 					"fragment" : "/wd\"4068\" /bigobj"
@@ -148,11 +148,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 3,
-			"id" : "xlnt::@874320f2c4e182ab03bd"
+			"id" : "libstudxml::@adc904478183145f15fa"
 		},
 		{
-			"id" : "libstudxml::@adc904478183145f15fa"
+			"backtrace" : 3,
+			"id" : "xlnt::@874320f2c4e182ab03bd"
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
@@ -164,7 +164,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
 				"role" : "flags"
 			},
 			{
@@ -173,7 +173,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\source\\RelWithDebInfo\\xlnt.lib",
+				"fragment" : "..\\source\\Debug\\xlntd.lib",
 				"role" : "libraries"
 			},
 			{
