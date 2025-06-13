@@ -1,6 +1,7 @@
 #ifndef MENUSTYLE_H
 #define MENUSTYLE_H
 #include "header.h"
+
 using namespace std;
 
 // functionEnter

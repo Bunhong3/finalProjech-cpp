@@ -1,7 +1,6 @@
 #ifndef CLASSMAIN_H
 #define CLASSMAIN_H
 #include "header.h"
-
 // Forward declarations to resolve circular dependencies
 class Employee;
 class User;
@@ -784,197 +783,179 @@ public:
     }
 };
 
-// 5. Client Relationship Management
-class ClientRelationshipManagement
-{
+class ClientRelationshipManagement {
 private:
-    vector<Client> &clients;     // Reference to the main clients vector
-    vector<Employee> &employees; // Reference to the main employees vector
-    vector<Project> &projects;   // Reference to the main projects vector
-    int &nextClientId;           // Reference to the global client ID counter
+    std::vector<Client>& clients;
+    std::vector<Employee>& employees;
+    std::vector<Project>& projects;
+    int& nextClientId;
 
 public:
-    ClientRelationshipManagement(vector<Client> &allClients, vector<Employee> &allEmployees, vector<Project> &allProjects, int &idCounter)
+    ClientRelationshipManagement(std::vector<Client>& allClients,
+                                 std::vector<Employee>& allEmployees,
+                                 std::vector<Project>& allProjects,
+                                 int& idCounter)
         : clients(allClients), employees(allEmployees), projects(allProjects), nextClientId(idCounter) {}
 
-    void addClientRecord(User *currentUser)
-    {
-        if (!currentUser || !currentUser->canAdd())
-        {
-            cout << "Permission denied." << endl;
+    void addClientRecord(User* currentUser) {
+        if (!currentUser || !currentUser->canAdd()) {
+            std::cout << "Permission denied." << std::endl;
             return;
         }
-        string name, contactPerson, contactEmail;
-        cout << "Enter Client Name: ";
-        cin.ignore();
-        getline(cin, name);
-        cout << "Enter Contact Person: ";
-        getline(cin, contactPerson);
-        cout << "Enter Contact Email: ";
-        getline(cin, contactEmail);
+
+        std::string name, contactPerson, contactEmail;
+        std::cin.ignore();
+        std::cout << "Enter Client Name: ";
+        std::getline(std::cin, name);
+        std::cout << "Enter Contact Person: ";
+        std::getline(std::cin, contactPerson);
+        std::cout << "Enter Contact Email: ";
+        std::getline(std::cin, contactEmail);
 
         clients.emplace_back(nextClientId++, name, contactPerson, contactEmail);
-        cout << "Client record added successfully. ID: " << clients.back().id << endl;
+        std::cout << "Client record added successfully. ID: " << clients.back().id << std::endl;
     }
 
-    void assignEmployeesToClientsAccounts(User *currentUser)
-    {
-        if (!currentUser || !currentUser->canUpdate())
-        {
-            cout << "Permission denied." << endl;
+    void assignEmployeesToClientsAccounts(User* currentUser) {
+        if (!currentUser || !currentUser->canUpdate()) {
+            std::cout << "Permission denied." << std::endl;
             return;
         }
+
         int empId, clientId;
-        cout << "Enter Employee ID: ";
-        cin >> empId;
-        cout << "Enter Client ID to assign: ";
-        cin >> clientId;
+        std::cout << "Enter Employee ID: ";
+        std::cin >> empId;
+        std::cout << "Enter Client ID to assign: ";
+        std::cin >> clientId;
 
-        bool empFound = false;
-        bool clientFound = false;
-
-        for (Employee &emp : employees)
-        {
-            if (emp.id == empId)
-            {
+        bool empFound = false, clientFound = false;
+        for (auto& emp : employees) {
+            if (emp.id == empId) {
                 emp.assignedClientId = clientId;
                 empFound = true;
                 break;
             }
         }
 
-        for (const Client &client : clients)
-        {
-            if (client.id == clientId)
-            {
+        for (const auto& client : clients) {
+            if (client.id == clientId) {
                 clientFound = true;
                 break;
             }
         }
 
         if (empFound && clientFound)
-        {
-            cout << "Employee " << empId << " assigned to Client " << clientId << " successfully." << endl;
-        }
+            std::cout << "Employee assigned successfully." << std::endl;
         else
-        {
-            cout << "Employee or Client not found." << endl;
-        }
+            std::cout << "Employee or Client not found." << std::endl;
     }
 
-    void trackClientSpecificProjectsOrContacts(User *currentUser)
-    {
-        if (!currentUser || !currentUser->canView())
-        {
-            cout << "Permission denied." << endl;
+    void displayAllClients(User* currentUser) {
+    if (!currentUser || !currentUser->canView()) {
+        std::cout << "Permission denied." << std::endl;
+        return;
+    }
+
+    if (clients.empty()) {
+        std::cout << "No clients found." << std::endl;
+        return;
+    }
+
+    Table table;
+
+    // Header row
+    table.add_row({"Client ID", "Client Name", "Contact Person", "Contact Email"});
+    table[0].format()
+        .font_style({FontStyle::bold})
+        .font_align(FontAlign::center)
+        .font_color(Color::cyan)
+        .border_bottom("─");
+
+    // Client rows
+    for (const auto &c : clients) {
+        table.add_row({
+            std::to_string(c.id),
+            c.name,
+            c.contactPerson,
+            c.contactEmail
+        });
+    }
+
+    // Center-align all rows
+    for (size_t i = 1; i < table.size(); ++i) {
+        table[i].format().font_align(FontAlign::center);
+    }
+
+    std::cout << table << std::endl;
+}
+
+    void trackClientSpecificProjectsOrContacts(User* currentUser) {
+        if (!currentUser || !currentUser->canView()) {
+            std::cout << "Permission denied." << std::endl;
             return;
         }
+
         int clientId;
-        cout << "Enter Client ID to view projects/contacts: ";
-        cin >> clientId;
+        std::cout << "Enter Client ID to view projects/contacts: ";
+        std::cin >> clientId;
 
         bool clientFound = false;
-        for (const Client &client : clients)
-        {
-            if (client.id == clientId)
-            {
-                cout << "\nClient Details:" << endl;
-                client.display(); // Displays individual client details
+        for (const auto& client : clients) {
+            if (client.id == clientId) {
+                std::cout << "\nClient Details:\n";
+                client.display();
                 clientFound = true;
                 break;
             }
         }
 
-        if (!clientFound)
-        {
-            cout << "Client not found." << endl;
+        if (!clientFound) {
+            std::cout << "Client not found." << std::endl;
             return;
         }
 
-        cout << "\nProjects for Client " << clientId << ":" << endl;
-        bool projectFoundForClient = false;
+        std::cout << "\nProjects for Client " << clientId << ":\n";
+        bool hasProjects = false;
 
-        // Collect projects for this client to display in a table
-        vector<const Project *> clientProjects;
-        for (const Project &proj : projects)
-        {
-            if (proj.clientId == clientId)
-            {
-                clientProjects.push_back(&proj);
-                projectFoundForClient = true;
+        for (const auto& proj : projects) {
+            if (proj.clientId == clientId) {
+                cout << "Project ID: " << proj.id
+                          << ", Name: " << proj.name
+                          << ", Deadline: " << proj.deadline.toString()
+                          << ", Description: " << proj.description <<endl;
+                hasProjects = true;
             }
         }
 
-        if (!projectFoundForClient)
-        {
-            cout << "No projects found for this client." << endl;
-        }
-        else
-        {
-            const int projIdWidth = 8;
-            const int projNameWidth = 25;
-            const int deadlineWidth = 15;
-            const int descWidth = 30;
-
-            cout << "|" << left << setw(projIdWidth) << "Proj ID"
-                 << "|" << left << setw(projNameWidth) << "Project Name"
-                 << "|" << left << setw(deadlineWidth) << "Deadline"
-                 << "|" << left << setw(descWidth) << "Description"
-                 << "|" << endl;
-            cout << "|" << string(projIdWidth, '-')
-                 << "|" << string(projNameWidth, '-')
-                 << "|" << string(deadlineWidth, '-')
-                 << "|" << string(descWidth, '-')
-                 << "|" << endl;
-
-            for (const auto *proj : clientProjects)
-            {
-                cout << "|" << left << setw(projIdWidth) << proj->id
-                     << "|" << left << setw(projNameWidth) << proj->name
-                     << "|" << left << setw(deadlineWidth) << proj->deadline.toString()
-                     << "|" << left << setw(descWidth) << proj->description
-                     << "|" << endl;
-            }
+        if (!hasProjects) {
+            std::cout << "No projects found for this client." << std::endl;
         }
     }
 
-    void displayAllClients(User *currentUser)
-    {
-        if (!currentUser || !currentUser->canView())
-        {
-            cout << "Permission denied." << endl;
-            return;
+    void exportClientsToExcel(const std::string& filePath) {
+        xlnt::workbook wb;
+        xlnt::worksheet ws = wb.active_sheet();
+        ws.title("Clients");
+
+        ws.cell("A1").value("ID");
+        ws.cell("B1").value("Name");
+        ws.cell("C1").value("Contact Person");
+        ws.cell("D1").value("Contact Email");
+
+        int row = 2;
+        for (const auto& client : clients) {
+            ws.cell("A" + std::to_string(row)).value(client.id);
+            ws.cell("B" + std::to_string(row)).value(client.name);
+            ws.cell("C" + std::to_string(row)).value(client.contactPerson);
+            ws.cell("D" + std::to_string(row)).value(client.contactEmail);
+            ++row;
         }
-        cout << "\nAll Clients:" << endl;
-        if (clients.empty())
-        {
-            cout << "No clients in the system." << endl;
-            return;
-        }
 
-        const int clientIdWidth = 8;
-        const int clientNameWidth = 25;
-        const int contactPersonWidth = 20;
-        const int contactEmailWidth = 30;
-
-        cout << "|" << left << setw(clientIdWidth) << "Client ID"
-             << "|" << left << setw(clientNameWidth) << "Client Name"
-             << "|" << left << setw(contactPersonWidth) << "Contact Person"
-             << "|" << left << setw(contactEmailWidth) << "Contact Email"
-             << "|" << endl;
-        cout << "|" << string(clientIdWidth, '-')
-             << "|" << string(clientNameWidth, '-')
-             << "|" << string(contactPersonWidth, '-')
-             << "|" << string(contactEmailWidth, '-')
-             << "|" << endl;
-
-        for (const auto &client : clients)
-        {
-            cout << "|" << left << setw(clientIdWidth) << client.id
-                 << "|" << left << setw(clientNameWidth) << client.name
-                 << "|" << left << setw(contactPersonWidth) << client.contactPerson
-                 << "|" << left << setw(contactEmailWidth) << client.contactEmail
-                 << "|" << endl;
+        try {
+            wb.save(filePath);
+            std::cout << "Clients exported to Excel successfully to: " << filePath << std::endl;
+        } catch (const std::exception& e) {
+            std::cerr << "Error exporting to Excel: " << e.what() << std::endl;
         }
     }
 };
