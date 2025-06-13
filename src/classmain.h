@@ -1,12 +1,22 @@
 #ifndef CLASSMAIN_H
 #define CLASSMAIN_H
 #include "header.h"
+#include <string>       // For std::string
+#include <sstream>      // For std::ostringstream
+#include <iomanip>      // For std::fixed and std::setprecision
+
 // Forward declarations to resolve circular dependencies
 class Employee;
 class User;
 class Client;
 class Project;
-
+template<typename T>
+std::string to_string_with_precision(const T a_value, const int n = 2)
+{
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(n) << a_value;
+    return out.str();
+}
 // Enum for user roles
 enum UserRole
 {
@@ -61,7 +71,23 @@ public:
 
     void display() const
     {
-        cout << "ID: " << id << ", Name: " << name << ", Dept: " << department << ", Position: " << position << ", Salary: $" << fixed << setprecision(2) << salary << ", Status: " << hiringStatus << endl;
+        Table employee_details;
+        employee_details.add_row({"Attribute", "Value"});
+        employee_details[0].format().font_style({FontStyle::bold});
+        employee_details.add_row({"ID", to_string(id)});
+        employee_details.add_row({"Name", name});
+        employee_details.add_row({"Department", department});
+        employee_details.add_row({"Position", position});
+        employee_details.add_row({"Salary", "$" + to_string_with_precision(salary)});
+        employee_details.add_row({"Hiring Status", hiringStatus});
+        employee_details.add_row({"Hours Worked", to_string_with_precision(hoursWorked, 1)});
+        employee_details.add_row({"Vacation Days", to_string(vacationDays)});
+        employee_details.add_row({"Sick Days", to_string(sickDays)});
+        employee_details.add_row({"Other Leave", to_string(otherLeaveDays)});
+        employee_details.add_row({"Assigned Client ID", (assignedClientId == -1 ? "N/A" : to_string(assignedClientId))});
+        employee_details.add_row({"Assigned Project ID", (assignedProjectId == -1 ? "N/A" : to_string(assignedProjectId))});
+
+        cout << employee_details << endl;
     }
 };
 
@@ -97,7 +123,14 @@ public:
 
     void display() const
     {
-        cout << "Client ID: " << id << ", Name: " << name << ", Contact: " << contactPerson << " (" << contactEmail << ")" << endl;
+        Table client_details;
+        client_details.add_row({"Attribute", "Value"});
+        client_details[0].format().font_style({FontStyle::bold});
+        client_details.add_row({"Client ID", to_string(id)});
+        client_details.add_row({"Name", name});
+        client_details.add_row({"Contact Person", contactPerson});
+        client_details.add_row({"Contact Email", contactEmail});
+        cout << client_details << endl;
     }
 };
 
@@ -116,7 +149,15 @@ public:
 
     void display() const
     {
-        cout << "Project ID: " << id << ", Name: " << name << ", Deadline: " << deadline.toString() << ", Description: " << description << endl;
+        Table project_details;
+        project_details.add_row({"Attribute", "Value"});
+        project_details[0].format().font_style({FontStyle::bold});
+        project_details.add_row({"Project ID", to_string(id)});
+        project_details.add_row({"Name", name});
+        project_details.add_row({"Description", description});
+        project_details.add_row({"Deadline", deadline.toString()});
+        project_details.add_row({"Client ID", to_string(clientId)});
+        cout << project_details << endl;
     }
 };
 
@@ -415,43 +456,15 @@ public:
             return;
         }
 
-        // Define column widths for better formatting (adjust as needed)
-        const int idWidth = 4;
-        const int nameWidth = 20;
-        const int deptWidth = 15;
-        const int posWidth = 20;
-        const int salaryWidth = 10;
-        const int statusWidth = 15;
+        Table table;
+        table.add_row({"ID", "Name", "Department", "Position", "Salary", "Status"});
+        table[0].format().font_style({FontStyle::bold});
 
-        // Print table header
-        cout << "|" << left << setw(idWidth) << "ID"
-             << "|" << left << setw(nameWidth) << "Name"
-             << "|" << left << setw(deptWidth) << "Dept"
-             << "|" << left << setw(posWidth) << "Position"
-             << "|" << left << setw(salaryWidth) << "Salary"
-             << "|" << left << setw(statusWidth) << "Status"
-             << "|" << endl;
-
-        // Print separator line
-        cout << "|" << string(idWidth, '-')
-             << "|" << string(nameWidth, '-')
-             << "|" << string(deptWidth, '-')
-             << "|" << string(posWidth, '-')
-             << "|" << string(salaryWidth, '-')
-             << "|" << string(statusWidth, '-')
-             << "|" << endl;
-
-        // Print employee data rows
         for (const auto &emp : employees)
         {
-            cout << "|" << left << setw(idWidth) << emp.id
-                 << "|" << left << setw(nameWidth) << emp.name
-                 << "|" << left << setw(deptWidth) << emp.department
-                 << "|" << left << setw(posWidth) << emp.position
-                 << "|" << left << setw(salaryWidth) << fixed << setprecision(2) << emp.salary
-                 << "|" << left << setw(statusWidth) << emp.hiringStatus
-                 << "|" << endl;
+            table.add_row({to_string(emp.id), emp.name, emp.department, emp.position, to_string_with_precision(emp.salary), emp.hiringStatus});
         }
+        cout << table << endl;
     }
 
     void displayOneEmployeeByID(User *currentUser)
@@ -470,7 +483,7 @@ public:
             if (emp.id == id)
             {
                 cout << "\nEmployee Details:" << endl;
-                emp.display(); // Uses the original Employee::display()
+                emp.display();
                 return;
             }
         }
@@ -489,49 +502,29 @@ public:
         cin.ignore(); // Clear buffer
         getline(cin, query);
 
-        cout << "\nFound Employees:" << endl;
+        Table results;
+        results.add_row({"ID", "Name", "Department", "Position", "Status"});
+        results[0].format().font_style({FontStyle::bold});
+
         bool found = false;
-
-        // Print table header for search results
-        const int idWidth = 4;
-        const int nameWidth = 20;
-        const int deptWidth = 15;
-        const int statusWidth = 15;
-        const int positionWidth = 20; // Added position for completeness
-
-        cout << "|" << left << setw(idWidth) << "ID"
-             << "|" << left << setw(nameWidth) << "Name"
-             << "|" << left << setw(deptWidth) << "Dept"
-             << "|" << left << setw(positionWidth) << "Position"
-             << "|" << left << setw(statusWidth) << "Status"
-             << "|" << endl;
-        cout << "|" << string(idWidth, '-')
-             << "|" << string(nameWidth, '-')
-             << "|" << string(deptWidth, '-')
-             << "|" << string(positionWidth, '-')
-             << "|" << string(statusWidth, '-')
-             << "|" << endl;
-
         for (const auto &emp : employees)
         {
-            // Check if name contains query, ID matches query, or department contains query
             if (emp.name.find(query) != string::npos ||
                 to_string(emp.id) == query ||
                 emp.department.find(query) != string::npos)
             {
-
-                cout << "|" << left << setw(idWidth) << emp.id
-                     << "|" << left << setw(nameWidth) << emp.name
-                     << "|" << left << setw(deptWidth) << emp.department
-                     << "|" << left << setw(positionWidth) << emp.position
-                     << "|" << left << setw(statusWidth) << emp.hiringStatus
-                     << "|" << endl;
+                results.add_row({to_string(emp.id), emp.name, emp.department, emp.position, emp.hiringStatus});
                 found = true;
             }
         }
+
         if (!found)
         {
             cout << "No employees found matching your query." << endl;
+        }
+        else
+        {
+            cout << results << endl;
         }
     }
 };
@@ -585,29 +578,15 @@ public:
             departmentCounts[emp.department]++;
         }
 
-        cout << "\nResource Allocation per Department:" << endl;
-        if (departmentCounts.empty())
-        {
-            cout << "No departments to display." << endl;
-            return;
-        }
-
-        const int deptNameWidth = 20;
-        const int countWidth = 10;
-
-        cout << "|" << left << setw(deptNameWidth) << "Department"
-             << "|" << left << setw(countWidth) << "Employees"
-             << "|" << endl;
-        cout << "|" << string(deptNameWidth, '-')
-             << "|" << string(countWidth, '-')
-             << "|" << endl;
+        Table table;
+        table.add_row({"Department", "Number of Employees"});
+        table[0].format().font_style({FontStyle::bold});
 
         for (const auto &pair : departmentCounts)
         {
-            cout << "|" << left << setw(deptNameWidth) << pair.first
-                 << "|" << left << setw(countWidth) << pair.second
-                 << "|" << endl;
+            table.add_row({pair.first, to_string(pair.second)});
         }
+        cout << table << endl;
     }
 
     void reassignEmployeesBetweenDepartments(User *currentUser)
@@ -618,7 +597,7 @@ public:
             return;
         }
         int empId;
-        string newDept; // No need for oldDept in input, just find by ID and change
+        string newDept;
         cout << "Enter employee ID to reassign: ";
         cin >> empId;
         cout << "Enter new department: ";
@@ -650,29 +629,15 @@ public:
             positionCounts[emp.position]++;
         }
 
-        cout << "\nPosition/Role Distribution:" << endl;
-        if (positionCounts.empty())
-        {
-            cout << "No positions to display." << endl;
-            return;
-        }
-
-        const int posNameWidth = 25;
-        const int countWidth = 10;
-
-        cout << "|" << left << setw(posNameWidth) << "Position/Role"
-             << "|" << left << setw(countWidth) << "Employees"
-             << "|" << endl;
-        cout << "|" << string(posNameWidth, '-')
-             << "|" << string(countWidth, '-')
-             << "|" << endl;
+        Table table;
+        table.add_row({"Position", "Number of Employees"});
+        table[0].format().font_style({FontStyle::bold});
 
         for (const auto &pair : positionCounts)
         {
-            cout << "|" << left << setw(posNameWidth) << pair.first
-                 << "|" << left << setw(countWidth) << pair.second
-                 << "|" << endl;
+            table.add_row({pair.first, to_string(pair.second)});
         }
+        cout << table << endl;
     }
 };
 
@@ -915,20 +880,23 @@ public:
         }
 
         std::cout << "\nProjects for Client " << clientId << ":\n";
-        bool hasProjects = false;
+        
+        Table projects_table;
+        projects_table.add_row({"Project ID", "Name", "Deadline", "Description"});
+        projects_table[0].format().font_style({FontStyle::bold});
 
+        bool hasProjects = false;
         for (const auto& proj : projects) {
             if (proj.clientId == clientId) {
-                cout << "Project ID: " << proj.id
-                          << ", Name: " << proj.name
-                          << ", Deadline: " << proj.deadline.toString()
-                          << ", Description: " << proj.description <<endl;
+                projects_table.add_row({to_string(proj.id), proj.name, proj.deadline.toString(), proj.description});
                 hasProjects = true;
             }
         }
 
         if (!hasProjects) {
             std::cout << "No projects found for this client." << std::endl;
+        } else {
+            cout << projects_table << endl;
         }
     }
 
@@ -1073,30 +1041,15 @@ public:
             return;
         }
 
-        const int projIdWidth = 8;
-        const int projNameWidth = 25;
-        const int deadlineWidth = 15;
-        const int descWidth = 30;
-
-        cout << "|" << left << setw(projIdWidth) << "Proj ID"
-             << "|" << left << setw(projNameWidth) << "Project Name"
-             << "|" << left << setw(deadlineWidth) << "Deadline"
-             << "|" << left << setw(descWidth) << "Description"
-             << "|" << endl;
-        cout << "|" << string(projIdWidth, '-')
-             << "|" << string(projNameWidth, '-')
-             << "|" << string(deadlineWidth, '-')
-             << "|" << string(descWidth, '-')
-             << "|" << endl;
+        Table table;
+        table.add_row({"Project ID", "Name", "Deadline", "Description"});
+        table[0].format().font_style({FontStyle::bold});
 
         for (const auto &proj : projects)
         {
-            cout << "|" << left << setw(projIdWidth) << proj.id
-                 << "|" << left << setw(projNameWidth) << proj.name
-                 << "|" << left << setw(deadlineWidth) << proj.deadline.toString()
-                 << "|" << left << setw(descWidth) << (proj.description.length() > descWidth ? proj.description.substr(0, descWidth - 3) + "..." : proj.description) // Truncate long descriptions
-                 << "|" << endl;
+            table.add_row({to_string(proj.id), proj.name, proj.deadline.toString(), proj.description});
         }
+        cout << table << endl;
     }
 
     void viewEmployeesAssignedToProjects(User *currentUser)
@@ -1118,49 +1071,27 @@ public:
                 projectFound = true;
                 cout << "\nEmployees assigned to Project " << proj.name << " (ID: " << proj.id << "):" << endl;
 
-                vector<const Employee *> assignedEmployees;
+                Table table;
+                table.add_row({"ID", "Name", "Department", "Position", "Status"});
+                table[0].format().font_style({FontStyle::bold});
+                bool assignedFound = false;
+
                 for (const auto &emp : employees)
                 {
                     if (emp.assignedProjectId == projId)
                     {
-                        assignedEmployees.push_back(&emp);
+                        table.add_row({to_string(emp.id), emp.name, emp.department, emp.position, emp.hiringStatus});
+                        assignedFound = true;
                     }
                 }
 
-                if (assignedEmployees.empty())
+                if (!assignedFound)
                 {
                     cout << "No employees assigned to this project." << endl;
                 }
                 else
                 {
-                    const int idWidth = 4;
-                    const int nameWidth = 20;
-                    const int deptWidth = 15;
-                    const int posWidth = 20;
-                    const int statusWidth = 15;
-
-                    cout << "|" << left << setw(idWidth) << "ID"
-                         << "|" << left << setw(nameWidth) << "Name"
-                         << "|" << left << setw(deptWidth) << "Dept"
-                         << "|" << left << setw(posWidth) << "Position"
-                         << "|" << left << setw(statusWidth) << "Status"
-                         << "|" << endl;
-                    cout << "|" << string(idWidth, '-')
-                         << "|" << string(nameWidth, '-')
-                         << "|" << string(deptWidth, '-')
-                         << "|" << string(posWidth, '-')
-                         << "|" << string(statusWidth, '-')
-                         << "|" << endl;
-
-                    for (const auto *emp : assignedEmployees)
-                    {
-                        cout << "|" << left << setw(idWidth) << emp->id
-                             << "|" << left << setw(nameWidth) << emp->name
-                             << "|" << left << setw(deptWidth) << emp->department
-                             << "|" << left << setw(posWidth) << emp->position
-                             << "|" << left << setw(statusWidth) << emp->hiringStatus
-                             << "|" << endl;
-                    }
+                    cout << table << endl;
                 }
                 return;
             }
@@ -1207,34 +1138,16 @@ public:
             departmentSalaries[emp.department] += emp.salary;
         }
 
-        cout << "\nDepartment-wise Employee Statistics:" << endl;
-        if (departmentCounts.empty())
-        {
-            cout << "No department data to display." << endl;
-            return;
-        }
-
-        const int deptNameWidth = 20;
-        const int countWidth = 10;
-        const int avgSalaryWidth = 15;
-
-        cout << "|" << left << setw(deptNameWidth) << "Department"
-             << "|" << left << setw(countWidth) << "Count"
-             << "|" << left << setw(avgSalaryWidth) << "Avg Salary"
-             << "|" << endl;
-        cout << "|" << string(deptNameWidth, '-')
-             << "|" << string(countWidth, '-')
-             << "|" << string(avgSalaryWidth, '-')
-             << "|" << endl;
+        Table table;
+        table.add_row({"Department", "Employee Count", "Average Salary"});
+        table[0].format().font_style({FontStyle::bold});
 
         for (const auto &pair : departmentCounts)
         {
             double avgSalary = (pair.second > 0) ? (departmentSalaries[pair.first] / pair.second) : 0.0;
-            cout << "|" << left << setw(deptNameWidth) << pair.first
-                 << "|" << left << setw(countWidth) << pair.second
-                 << "|" << left << setw(avgSalaryWidth) << fixed << setprecision(2) << avgSalary
-                 << "|" << endl;
+            table.add_row({pair.first, to_string(pair.second), to_string_with_precision(avgSalary)});
         }
+        cout << table << endl;
     }
 
     void calculateSalaryMetrics(User *currentUser)
@@ -1263,10 +1176,13 @@ public:
                 maxSalary = emp.salary;
         }
 
-        cout << "\nSalary Metrics:" << endl;
-        cout << "Average Salary: $" << fixed << setprecision(2) << (totalSalary / employees.size()) << endl;
-        cout << "Max Salary: $" << fixed << setprecision(2) << maxSalary << endl;
-        cout << "Min Salary: $" << fixed << setprecision(2) << minSalary << endl;
+        Table table;
+        table.add_row({"Metric", "Value"});
+        table[0].format().font_style({FontStyle::bold});
+        table.add_row({"Average Salary", "$" + to_string_with_precision(totalSalary / employees.size())});
+        table.add_row({"Maximum Salary", "$" + to_string_with_precision(maxSalary)});
+        table.add_row({"Minimum Salary", "$" + to_string_with_precision(minSalary)});
+        cout << table << endl;
     }
 
     void sortEmployees(User *currentUser)
@@ -1302,44 +1218,31 @@ public:
         }
 
         cout << "\nEmployees sorted by " << sortBy << ":" << endl;
-        // Re-using EmployeeManagement::displayAllEmployees's table logic for sorted display
-        // Define column widths for better formatting (adjust as needed)
-        const int idWidth = 4;
-        const int nameWidth = 20;
-        const int deptWidth = 15;
-        const int posWidth = 20;
-        const int salaryWidth = 10;
-        const int statusWidth = 15;
+        displayAllEmployees(currentUser);
+    }
+     void displayAllEmployees(User *currentUser)
+    {
+        if (!currentUser || !currentUser->canView())
+        {
+            cout << "Permission denied." << endl;
+            return;
+        }
+        cout << "\nAll Employees:" << endl;
+        if (employees.empty())
+        {
+            cout << "No employees in the system." << endl;
+            return;
+        }
 
-        // Print table header
-        cout << "|" << left << setw(idWidth) << "ID"
-             << "|" << left << setw(nameWidth) << "Name"
-             << "|" << left << setw(deptWidth) << "Dept"
-             << "|" << left << setw(posWidth) << "Position"
-             << "|" << left << setw(salaryWidth) << "Salary"
-             << "|" << left << setw(statusWidth) << "Status"
-             << "|" << endl;
+        Table table;
+        table.add_row({"ID", "Name", "Department", "Position", "Salary", "Status"});
+        table[0].format().font_style({FontStyle::bold});
 
-        // Print separator line
-        cout << "|" << string(idWidth, '-')
-             << "|" << string(nameWidth, '-')
-             << "|" << string(deptWidth, '-')
-             << "|" << string(posWidth, '-')
-             << "|" << string(salaryWidth, '-')
-             << "|" << string(statusWidth, '-')
-             << "|" << endl;
-
-        // Print employee data rows
         for (const auto &emp : employees)
         {
-            cout << "|" << left << setw(idWidth) << emp.id
-                 << "|" << left << setw(nameWidth) << emp.name
-                 << "|" << left << setw(deptWidth) << emp.department
-                 << "|" << left << setw(posWidth) << emp.position
-                 << "|" << left << setw(salaryWidth) << fixed << setprecision(2) << emp.salary
-                 << "|" << left << setw(statusWidth) << emp.hiringStatus
-                 << "|" << endl;
+            table.add_row({to_string(emp.id), emp.name, emp.department, emp.position, to_string_with_precision(emp.salary), emp.hiringStatus});
         }
+        cout << table << endl;
     }
 };
 
@@ -2038,5 +1941,4 @@ public:
         } while ((currentUser && choice != 10) || (!currentUser && choice != 2));
     }
 };
-
 #endif

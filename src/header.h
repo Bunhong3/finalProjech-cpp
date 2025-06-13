@@ -1,6 +1,7 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+#include <conio.h>
 #include <iostream>
 #include <vector>
 #include <string>
