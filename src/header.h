@@ -1,6 +1,7 @@
 #ifndef HEADER_H
-#define HEADER_H
-
+#define HEADER_H    // For std::string
+#include <sstream>      // For std::ostringstream
+#include <iomanip>      // For std::fixed and std::setprecision
 #include <conio.h>
 #include <iostream>
 #include <vector>

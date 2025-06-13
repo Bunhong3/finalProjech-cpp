@@ -8,6 +8,15 @@
         "format": "cpp",
         "thread": "cpp",
         "string": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "iomanip": "cpp",
+        "algorithm": "cpp",
+        "complex": "cpp",
+        "functional": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp"
     }
 }

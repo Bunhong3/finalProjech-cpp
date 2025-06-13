@@ -195,7 +195,7 @@ public:
             if (user.username == username && user.password == password)
             {
                 currentUser = &user;
-                cout << "Login successful. Welcome, " << currentUser->username << "!" << endl;
+                cout <<green( ">> Login successful. Welcome, ") << currentUser->username << green("!") << endl;
                 cout << "Role: ";
                 switch (currentUser->role)
                 {
@@ -223,14 +223,14 @@ public:
                 return;
             }
         }
-        cout << "Login failed. Invalid credentials." << endl;
+        cout << red("Login failed. Invalid credentials.") << endl;
         currentUser = nullptr;
     }
 
     void logout()
     {
         currentUser = nullptr;
-        cout << "Logged out successfully." << endl;
+        cout << green("Logged out successfully.") << endl;
     }
 
     void addUser(User *currentLoggedInUser)
@@ -1286,222 +1286,179 @@ public:
                                businessIntelligence(employees)
     {
         // Attempt to load data on startup
-        loadSystemDataFromFile("worker_data.txt");
+        loadSystemDataFromFile("worker_data.xlsx");
     }
 
-    // --- File Handling (Save/Load data to file) ---
     void saveSystemDataToFile(const string &filename)
     {
-        ofstream outFile(filename);
-        if (!outFile.is_open())
-        {
-            cout << "Error: Could not open file " << filename << " for saving." << endl;
-            return;
-        }
+        xlnt::workbook wb;
 
-        // Save metadata (like next IDs)
-        outFile << "NEXT_EMPLOYEE_ID:" << nextEmployeeId << endl;
-        outFile << "NEXT_CLIENT_ID:" << nextClientId << endl;
-        outFile << "NEXT_PROJECT_ID:" << nextProjectId << endl;
+        // Metadata Sheet
+        xlnt::worksheet meta_ws = wb.active_sheet();
+        meta_ws.title("Metadata");
+        meta_ws.cell("A1").value("NEXT_EMPLOYEE_ID");
+        meta_ws.cell("B1").value(nextEmployeeId);
+        meta_ws.cell("A2").value("NEXT_CLIENT_ID");
+        meta_ws.cell("B2").value(nextClientId);
+        meta_ws.cell("A3").value("NEXT_PROJECT_ID");
+        meta_ws.cell("B3").value(nextProjectId);
 
-        // Save Employees (simple CSV-like format)
-        outFile << "EMPLOYEES_START" << endl;
+        // Employees Sheet
+        xlnt::worksheet emp_ws = wb.create_sheet();
+        emp_ws.title("Employees");
+        emp_ws.cell("A1").value("ID");
+        emp_ws.cell("B1").value("Name");
+        emp_ws.cell("C1").value("Department");
+        emp_ws.cell("D1").value("Position");
+        emp_ws.cell("E1").value("Salary");
+        emp_ws.cell("F1").value("HiringStatus");
+        emp_ws.cell("G1").value("HoursWorked");
+        emp_ws.cell("H1").value("VacationDays");
+        emp_ws.cell("I1").value("SickDays");
+        emp_ws.cell("J1").value("OtherLeaveDays");
+        emp_ws.cell("K1").value("AssignedClientId");
+        emp_ws.cell("L1").value("AssignedProjectId");
+        int row = 2;
         for (const auto &emp : employees)
         {
-            outFile << emp.id << ","
-                    << emp.name << ","
-                    << emp.department << ","
-                    << emp.position << ","
-                    << emp.salary << ","
-                    << emp.hiringStatus << ","
-                    << emp.hoursWorked << ","
-                    << emp.vacationDays << ","
-                    << emp.sickDays << ","
-                    << emp.otherLeaveDays << ","
-                    << emp.assignedClientId << ","
-                    << emp.assignedProjectId;
-            // For attendance, it's more complex; for simplicity, skipping for now or a very basic representation
-            // You might serialize attendance as a JSON string or separate lines
-            outFile << endl;
+            emp_ws.cell(1, row).value(emp.id);
+            emp_ws.cell(2, row).value(emp.name);
+            emp_ws.cell(3, row).value(emp.department);
+            emp_ws.cell(4, row).value(emp.position);
+            emp_ws.cell(5, row).value(emp.salary);
+            emp_ws.cell(6, row).value(emp.hiringStatus);
+            emp_ws.cell(7, row).value(emp.hoursWorked);
+            emp_ws.cell(8, row).value(emp.vacationDays);
+            emp_ws.cell(9, row).value(emp.sickDays);
+            emp_ws.cell(10, row).value(emp.otherLeaveDays);
+            emp_ws.cell(11, row).value(emp.assignedClientId);
+            emp_ws.cell(12, row).value(emp.assignedProjectId);
+            row++;
         }
-        outFile << "EMPLOYEES_END" << endl;
 
-        // Save Users
-        outFile << "USERS_START" << endl;
+        // Users Sheet
+        xlnt::worksheet user_ws = wb.create_sheet();
+        user_ws.title("Users");
+        user_ws.cell("A1").value("Username");
+        user_ws.cell("B1").value("Password");
+        user_ws.cell("C1").value("Role");
+        row = 2;
         for (const auto &user : users)
         {
-            outFile << user.username << ","
-                    << user.password << ","
-                    << user.role << endl; // Enum value will be integer
+            user_ws.cell(1, row).value(user.username);
+            user_ws.cell(2, row).value(user.password);
+            user_ws.cell(3, row).value(user.role);
+            row++;
         }
-        outFile << "USERS_END" << endl;
 
-        // Save Clients
-        outFile << "CLIENTS_START" << endl;
+        // Clients Sheet
+        xlnt::worksheet client_ws = wb.create_sheet();
+        client_ws.title("Clients");
+        client_ws.cell("A1").value("ID");
+        client_ws.cell("B1").value("Name");
+        client_ws.cell("C1").value("ContactPerson");
+        client_ws.cell("D1").value("ContactEmail");
+        row = 2;
         for (const auto &client : clients)
         {
-            outFile << client.id << ","
-                    << client.name << ","
-                    << client.contactPerson << ","
-                    << client.contactEmail << endl;
+            client_ws.cell(1, row).value(client.id);
+            client_ws.cell(2, row).value(client.name);
+            client_ws.cell(3, row).value(client.contactPerson);
+            client_ws.cell(4, row).value(client.contactEmail);
+            row++;
         }
-        outFile << "CLIENTS_END" << endl;
 
-        // Save Projects
-        outFile << "PROJECTS_START" << endl;
+        // Projects Sheet
+        xlnt::worksheet project_ws = wb.create_sheet();
+        project_ws.title("Projects");
+        project_ws.cell("A1").value("ID");
+        project_ws.cell("B1").value("Name");
+        project_ws.cell("C1").value("Description");
+        project_ws.cell("D1").value("DeadlineYear");
+        project_ws.cell("E1").value("DeadlineMonth");
+        project_ws.cell("F1").value("DeadlineDay");
+        project_ws.cell("G1").value("ClientId");
+        row = 2;
         for (const auto &proj : projects)
         {
-            outFile << proj.id << ","
-                    << proj.name << ","
-                    << proj.description << ","
-                    << proj.deadline.year << ","
-                    << proj.deadline.month << ","
-                    << proj.deadline.day << ","
-                    << proj.clientId << endl;
+            project_ws.cell(1, row).value(proj.id);
+            project_ws.cell(2, row).value(proj.name);
+            project_ws.cell(3, row).value(proj.description);
+            project_ws.cell(4, row).value(proj.deadline.year);
+            project_ws.cell(5, row).value(proj.deadline.month);
+            project_ws.cell(6, row).value(proj.deadline.day);
+            project_ws.cell(7, row).value(proj.clientId);
+            row++;
         }
-        outFile << "PROJECTS_END" << endl;
 
-        outFile.close();
+        wb.save(filename);
         cout << "System data saved to " << filename << " successfully." << endl;
     }
 
     void loadSystemDataFromFile(const string &filename)
     {
-        ifstream inFile(filename);
-        if (!inFile.is_open())
+        try
         {
-            // cout << "No existing data file found (" << filename << "). Starting with empty system." << endl;
-            return; // Not an error if file doesn't exist on first run
+            xlnt::workbook wb;
+            wb.load(filename);
+
+            employees.clear();
+            users.clear();
+            clients.clear();
+            projects.clear();
+
+            // Metadata
+            auto meta_ws = wb.sheet_by_title("Metadata");
+            nextEmployeeId = meta_ws.cell("B1").value<int>();
+            nextClientId = meta_ws.cell("B2").value<int>();
+            nextProjectId = meta_ws.cell("B3").value<int>();
+
+            // Employees
+            auto emp_ws = wb.sheet_by_title("Employees");
+            for (auto row : emp_ws.rows(false))
+            {
+                if (row[0].to_string() == "ID") continue; // Skip header
+                Employee emp(row[0].value<int>(), row[1].to_string(), row[2].to_string(), row[3].to_string(), row[4].value<double>());
+                emp.hiringStatus = row[5].to_string();
+                emp.hoursWorked = row[6].value<double>();
+                emp.vacationDays = row[7].value<double>();
+                emp.sickDays = row[8].value<double>();
+                emp.otherLeaveDays = row[9].value<double>();
+                emp.assignedClientId = row[10].value<int>();
+                emp.assignedProjectId = row[11].value<int>();
+                employees.push_back(emp);
+            }
+
+            // Users
+            auto user_ws = wb.sheet_by_title("Users");
+            for (auto row : user_ws.rows(false))
+            {
+                if (row[0].to_string() == "Username") continue; // Skip header
+                users.emplace_back(row[0].to_string(), row[1].to_string(), static_cast<UserRole>(row[2].value<int>()));
+            }
+
+            // Clients
+            auto client_ws = wb.sheet_by_title("Clients");
+            for (auto row : client_ws.rows(false))
+            {
+                if (row[0].to_string() == "ID") continue; // Skip header
+                clients.emplace_back(row[0].value<int>(), row[1].to_string(), row[2].to_string(), row[3].to_string());
+            }
+
+            // Projects
+            auto project_ws = wb.sheet_by_title("Projects");
+            for (auto row : project_ws.rows(false))
+            {
+                if (row[0].to_string() == "ID") continue; // Skip header
+                projects.emplace_back(row[0].value<int>(), row[1].to_string(), row[2].to_string(), Date{row[3].value<int>(), row[4].value<int>(), row[5].value<int>()}, row[6].value<int>());
+            }
+            cout << "System data loaded from " << filename << " successfully." << endl;
         }
-
-        // Clear current data before loading
-        employees.clear();
-        users.clear();
-        clients.clear();
-        projects.clear();
-        nextEmployeeId = 1;
-        nextClientId = 1;
-        nextProjectId = 1;
-        currentUser = nullptr; // Reset current user
-
-        string line;
-        string currentSection = "";
-        int maxLoadedEmployeeId = 0;
-        int maxLoadedClientId = 0;
-        int maxLoadedProjectId = 0;
-
-        while (getline(inFile, line))
+        catch (const xlnt::exception &e)
         {
-            if (line == "EMPLOYEES_START")
-            {
-                currentSection = "EMPLOYEES";
-                continue;
-            }
-            else if (line == "USERS_START")
-            {
-                currentSection = "USERS";
-                continue;
-            }
-            else if (line == "CLIENTS_START")
-            {
-                currentSection = "CLIENTS";
-                continue;
-            }
-            else if (line == "PROJECTS_START")
-            {
-                currentSection = "PROJECTS";
-                continue;
-            }
-            else if (line.find("NEXT_EMPLOYEE_ID:") == 0)
-            {
-                nextEmployeeId = stoi(line.substr(line.find(":") + 1));
-            }
-            else if (line.find("NEXT_CLIENT_ID:") == 0)
-            {
-                nextClientId = stoi(line.substr(line.find(":") + 1));
-            }
-            else if (line.find("NEXT_PROJECT_ID:") == 0)
-            {
-                nextProjectId = stoi(line.substr(line.find(":") + 1));
-            }
-            else if (line.find("_END") != string::npos)
-            {
-                currentSection = ""; // End of a section
-                continue;
-            }
-
-            if (currentSection == "EMPLOYEES")
-            {
-                stringstream ss(line);
-                string segment;
-                vector<string> seglist;
-                while (getline(ss, segment, ','))
-                {
-                    seglist.push_back(segment);
-                }
-                if (seglist.size() >= 12)
-                { // Ensure enough fields
-                    Employee emp(stoi(seglist[0]), seglist[1], seglist[2], seglist[3], stod(seglist[4]));
-                    emp.hiringStatus = seglist[5];
-                    emp.hoursWorked = stod(seglist[6]);
-                    emp.vacationDays = stod(seglist[7]);
-                    emp.sickDays = stod(seglist[8]);
-                    emp.otherLeaveDays = stod(seglist[9]);
-                    emp.assignedClientId = stoi(seglist[10]);
-                    emp.assignedProjectId = stoi(seglist[11]);
-                    // Attendance is complex to load from this simple format, skipping for now
-                    employees.push_back(emp);
-                    if (emp.id >= maxLoadedEmployeeId)
-                        maxLoadedEmployeeId = emp.id;
-                }
-            }
-            else if (currentSection == "USERS")
-            {
-                stringstream ss(line);
-                string username, password, roleStr;
-                getline(ss, username, ',');
-                getline(ss, password, ',');
-                getline(ss, roleStr);
-                users.emplace_back(username, password, static_cast<UserRole>(stoi(roleStr)));
-            }
-            else if (currentSection == "CLIENTS")
-            {
-                stringstream ss(line);
-                string idStr, name, contactPerson, contactEmail;
-                getline(ss, idStr, ',');
-                getline(ss, name, ',');
-                getline(ss, contactPerson, ',');
-                getline(ss, contactEmail);
-                clients.emplace_back(stoi(idStr), name, contactPerson, contactEmail);
-                if (stoi(idStr) >= maxLoadedClientId)
-                    maxLoadedClientId = stoi(idStr);
-            }
-            else if (currentSection == "PROJECTS")
-            {
-                stringstream ss(line);
-                string idStr, name, description, yearStr, monthStr, dayStr, clientIdStr;
-                getline(ss, idStr, ',');
-                getline(ss, name, ',');
-                getline(ss, description, ',');
-                getline(ss, yearStr, ',');
-                getline(ss, monthStr, ',');
-                getline(ss, dayStr, ',');
-                getline(ss, clientIdStr);
-                projects.emplace_back(stoi(idStr), name, description, Date{stoi(yearStr), stoi(monthStr), stoi(dayStr)}, stoi(clientIdStr));
-                if (stoi(idStr) >= maxLoadedProjectId)
-                    maxLoadedProjectId = stoi(idStr);
-            }
+            // It's okay if the file doesn't exist on first run
+            // std::cerr << "Could not load " << filename << ": " << e.what() << std::endl;
         }
-        inFile.close();
-        // Update next IDs if loaded data has higher IDs
-        if (maxLoadedEmployeeId >= nextEmployeeId)
-            nextEmployeeId = maxLoadedEmployeeId + 1;
-        if (maxLoadedClientId >= nextClientId)
-            nextClientId = maxLoadedClientId + 1;
-        if (maxLoadedProjectId >= nextProjectId)
-            nextProjectId = maxLoadedProjectId + 1;
-
-        cout << "System data loaded from " << filename << " successfully." << endl;
     }
 
     void showMainMenu()
@@ -1515,7 +1472,7 @@ public:
             return;
         }
         system("cls");
-        menuMain();
+         menuMain();
     }
 
     void processManagementMenu()
@@ -1809,13 +1766,13 @@ public:
             case 4:
             system("cls");
                 printHeaderStyle1("Save System Data");
-                saveSystemDataToFile("worker_data.txt");
+                saveSystemDataToFile("worker_data.xlsx");
                 pressEnter();
                 break; // Call save
             case 5:
             system("cls");
                 printHeaderStyle1("Load System Data");
-                loadSystemDataFromFile("worker_data.txt");
+                loadSystemDataFromFile("worker_data.xlsx");
                 pressEnter();
                 break; // Call load
             case 6:
@@ -1874,6 +1831,7 @@ public:
 
             if (currentUser)
             {
+                pressEnter();
                 switch (choice)
                 {
                 case 1:
