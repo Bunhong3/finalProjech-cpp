@@ -1,16 +1,16 @@
 #ifndef CLASSMAIN_H
 #define CLASSMAIN_H
 #include "header.h"
-#include <string>       // For std::string
-#include <sstream>      // For std::ostringstream
-#include <iomanip>      // For std::fixed and std::setprecision
+#include <string>  // For std::string
+#include <sstream> // For std::ostringstream
+#include <iomanip> // For std::fixed and std::setprecision
 
 // Forward declarations to resolve circular dependencies
 class Employee;
 class User;
 class Client;
 class Project;
-template<typename T>
+template <typename T>
 std::string to_string_with_precision(const T a_value, const int n = 2)
 {
     std::ostringstream out;
@@ -184,6 +184,8 @@ public:
 
     void login()
     {
+        system("cls");
+        printHeaderStyle3("---|Login System|---");
         string username, password;
         cout << "Enter Username: ";
         cin >> username;
@@ -195,8 +197,9 @@ public:
             if (user.username == username && user.password == password)
             {
                 currentUser = &user;
-                cout <<green( ">> Login successful. Welcome, ") << currentUser->username << green("!") << endl;
-                cout << "Role: ";
+                cout << green(">> Login successful. Welcome, ") << currentUser->username << green("!") << endl;
+                cout << endl;
+                cout << bold_cyan("Role: ");
                 switch (currentUser->role)
                 {
                 case ADMIN:
@@ -210,7 +213,7 @@ public:
                     break;
                 }
                 cout << endl;
-                cout << "Available Actions: ";
+                cout << bold_cyan("Available Actions: ");
                 if (currentUser->canAdd())
                     cout << "Add, ";
                 if (currentUser->canUpdate())
@@ -220,17 +223,19 @@ public:
                 if (currentUser->canView())
                     cout << "View";
                 cout << endl;
+                pressEnter();
                 return;
             }
         }
         cout << red("Login failed. Invalid credentials.") << endl;
         currentUser = nullptr;
+        pressEnter();
     }
 
     void logout()
     {
         currentUser = nullptr;
-        cout << green("Logged out successfully.") << endl;
+        cout << yellow("Logged out successfully.") << endl;
     }
 
     void addUser(User *currentLoggedInUser)
@@ -384,7 +389,7 @@ public:
                 if (newSalary != 0)
                     emp.salary = newSalary;
 
-                cout << "Employee details updated successfully." << endl;
+                cout << green("Employee details updated successfully.") << endl;
                 return;
             }
         }
@@ -748,22 +753,25 @@ public:
     }
 };
 
-class ClientRelationshipManagement {
+class ClientRelationshipManagement
+{
 private:
-    std::vector<Client>& clients;
-    std::vector<Employee>& employees;
-    std::vector<Project>& projects;
-    int& nextClientId;
+    std::vector<Client> &clients;
+    std::vector<Employee> &employees;
+    std::vector<Project> &projects;
+    int &nextClientId;
 
 public:
-    ClientRelationshipManagement(std::vector<Client>& allClients,
-                                 std::vector<Employee>& allEmployees,
-                                 std::vector<Project>& allProjects,
-                                 int& idCounter)
+    ClientRelationshipManagement(std::vector<Client> &allClients,
+                                 std::vector<Employee> &allEmployees,
+                                 std::vector<Project> &allProjects,
+                                 int &idCounter)
         : clients(allClients), employees(allEmployees), projects(allProjects), nextClientId(idCounter) {}
 
-    void addClientRecord(User* currentUser) {
-        if (!currentUser || !currentUser->canAdd()) {
+    void addClientRecord(User *currentUser)
+    {
+        if (!currentUser || !currentUser->canAdd())
+        {
             std::cout << "Permission denied." << std::endl;
             return;
         }
@@ -781,8 +789,10 @@ public:
         std::cout << "Client record added successfully. ID: " << clients.back().id << std::endl;
     }
 
-    void assignEmployeesToClientsAccounts(User* currentUser) {
-        if (!currentUser || !currentUser->canUpdate()) {
+    void assignEmployeesToClientsAccounts(User *currentUser)
+    {
+        if (!currentUser || !currentUser->canUpdate())
+        {
             std::cout << "Permission denied." << std::endl;
             return;
         }
@@ -794,16 +804,20 @@ public:
         std::cin >> clientId;
 
         bool empFound = false, clientFound = false;
-        for (auto& emp : employees) {
-            if (emp.id == empId) {
+        for (auto &emp : employees)
+        {
+            if (emp.id == empId)
+            {
                 emp.assignedClientId = clientId;
                 empFound = true;
                 break;
             }
         }
 
-        for (const auto& client : clients) {
-            if (client.id == clientId) {
+        for (const auto &client : clients)
+        {
+            if (client.id == clientId)
+            {
                 clientFound = true;
                 break;
             }
@@ -815,47 +829,48 @@ public:
             std::cout << "Employee or Client not found." << std::endl;
     }
 
-    void displayAllClients(User* currentUser) {
-    if (!currentUser || !currentUser->canView()) {
-        std::cout << "Permission denied." << std::endl;
-        return;
+    void displayAllClients(User *currentUser)
+    {
+        if (!currentUser || !currentUser->canView())
+        {
+            std::cout << "Permission denied." << std::endl;
+            return;
+        }
+
+        if (clients.empty())
+        {
+            std::cout << "No clients found." << std::endl;
+            return;
+        }
+
+        Table table;
+
+        // Header row
+        table.add_row({"Client ID", "Client Name", "Contact Person", "Contact Email"});
+        table[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center).font_color(Color::cyan).border_bottom("─");
+
+        // Client rows
+        for (const auto &c : clients)
+        {
+            table.add_row({std::to_string(c.id),
+                           c.name,
+                           c.contactPerson,
+                           c.contactEmail});
+        }
+
+        // Center-align all rows
+        for (size_t i = 1; i < table.size(); ++i)
+        {
+            table[i].format().font_align(FontAlign::center);
+        }
+
+        std::cout << table << std::endl;
     }
 
-    if (clients.empty()) {
-        std::cout << "No clients found." << std::endl;
-        return;
-    }
-
-    Table table;
-
-    // Header row
-    table.add_row({"Client ID", "Client Name", "Contact Person", "Contact Email"});
-    table[0].format()
-        .font_style({FontStyle::bold})
-        .font_align(FontAlign::center)
-        .font_color(Color::cyan)
-        .border_bottom("─");
-
-    // Client rows
-    for (const auto &c : clients) {
-        table.add_row({
-            std::to_string(c.id),
-            c.name,
-            c.contactPerson,
-            c.contactEmail
-        });
-    }
-
-    // Center-align all rows
-    for (size_t i = 1; i < table.size(); ++i) {
-        table[i].format().font_align(FontAlign::center);
-    }
-
-    std::cout << table << std::endl;
-}
-
-    void trackClientSpecificProjectsOrContacts(User* currentUser) {
-        if (!currentUser || !currentUser->canView()) {
+    void trackClientSpecificProjectsOrContacts(User *currentUser)
+    {
+        if (!currentUser || !currentUser->canView())
+        {
             std::cout << "Permission denied." << std::endl;
             return;
         }
@@ -865,8 +880,10 @@ public:
         std::cin >> clientId;
 
         bool clientFound = false;
-        for (const auto& client : clients) {
-            if (client.id == clientId) {
+        for (const auto &client : clients)
+        {
+            if (client.id == clientId)
+            {
                 std::cout << "\nClient Details:\n";
                 client.display();
                 clientFound = true;
@@ -874,33 +891,40 @@ public:
             }
         }
 
-        if (!clientFound) {
+        if (!clientFound)
+        {
             std::cout << "Client not found." << std::endl;
             return;
         }
 
         std::cout << "\nProjects for Client " << clientId << ":\n";
-        
+
         Table projects_table;
         projects_table.add_row({"Project ID", "Name", "Deadline", "Description"});
         projects_table[0].format().font_style({FontStyle::bold});
 
         bool hasProjects = false;
-        for (const auto& proj : projects) {
-            if (proj.clientId == clientId) {
+        for (const auto &proj : projects)
+        {
+            if (proj.clientId == clientId)
+            {
                 projects_table.add_row({to_string(proj.id), proj.name, proj.deadline.toString(), proj.description});
                 hasProjects = true;
             }
         }
 
-        if (!hasProjects) {
+        if (!hasProjects)
+        {
             std::cout << "No projects found for this client." << std::endl;
-        } else {
+        }
+        else
+        {
             cout << projects_table << endl;
         }
     }
 
-    void exportClientsToExcel(const std::string& filePath) {
+    void exportClientsToExcel(const std::string &filePath)
+    {
         xlnt::workbook wb;
         xlnt::worksheet ws = wb.active_sheet();
         ws.title("Clients");
@@ -911,7 +935,8 @@ public:
         ws.cell("D1").value("Contact Email");
 
         int row = 2;
-        for (const auto& client : clients) {
+        for (const auto &client : clients)
+        {
             ws.cell("A" + std::to_string(row)).value(client.id);
             ws.cell("B" + std::to_string(row)).value(client.name);
             ws.cell("C" + std::to_string(row)).value(client.contactPerson);
@@ -919,10 +944,13 @@ public:
             ++row;
         }
 
-        try {
+        try
+        {
             wb.save(filePath);
             std::cout << "Clients exported to Excel successfully to: " << filePath << std::endl;
-        } catch (const std::exception& e) {
+        }
+        catch (const std::exception &e)
+        {
             std::cerr << "Error exporting to Excel: " << e.what() << std::endl;
         }
     }
@@ -1220,7 +1248,7 @@ public:
         cout << "\nEmployees sorted by " << sortBy << ":" << endl;
         displayAllEmployees(currentUser);
     }
-     void displayAllEmployees(User *currentUser)
+    void displayAllEmployees(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
@@ -1417,7 +1445,8 @@ public:
             auto emp_ws = wb.sheet_by_title("Employees");
             for (auto row : emp_ws.rows(false))
             {
-                if (row[0].to_string() == "ID") continue; // Skip header
+                if (row[0].to_string() == "ID")
+                    continue; // Skip header
                 Employee emp(row[0].value<int>(), row[1].to_string(), row[2].to_string(), row[3].to_string(), row[4].value<double>());
                 emp.hiringStatus = row[5].to_string();
                 emp.hoursWorked = row[6].value<double>();
@@ -1433,7 +1462,8 @@ public:
             auto user_ws = wb.sheet_by_title("Users");
             for (auto row : user_ws.rows(false))
             {
-                if (row[0].to_string() == "Username") continue; // Skip header
+                if (row[0].to_string() == "Username")
+                    continue; // Skip header
                 users.emplace_back(row[0].to_string(), row[1].to_string(), static_cast<UserRole>(row[2].value<int>()));
             }
 
@@ -1441,7 +1471,8 @@ public:
             auto client_ws = wb.sheet_by_title("Clients");
             for (auto row : client_ws.rows(false))
             {
-                if (row[0].to_string() == "ID") continue; // Skip header
+                if (row[0].to_string() == "ID")
+                    continue; // Skip header
                 clients.emplace_back(row[0].value<int>(), row[1].to_string(), row[2].to_string(), row[3].to_string());
             }
 
@@ -1449,7 +1480,8 @@ public:
             auto project_ws = wb.sheet_by_title("Projects");
             for (auto row : project_ws.rows(false))
             {
-                if (row[0].to_string() == "ID") continue; // Skip header
+                if (row[0].to_string() == "ID")
+                    continue; // Skip header
                 projects.emplace_back(row[0].value<int>(), row[1].to_string(), row[2].to_string(), Date{row[3].value<int>(), row[4].value<int>(), row[5].value<int>()}, row[6].value<int>());
             }
             cout << "System data loaded from " << filename << " successfully." << endl;
@@ -1465,14 +1497,12 @@ public:
     {
         if (!currentUser)
         {
-            cout << "\n--- Worker Management System ---" << endl;
-            cout << "1. Login" << endl;
-            cout << "2. Exit" << endl;
-            cout << "Enter your choice: ";
+            printHeaderStyle3("---|Login System|---");
+            menuLogin();
             return;
         }
         system("cls");
-         menuMain();
+        menuMain();
     }
 
     void processManagementMenu()
@@ -1658,25 +1688,25 @@ public:
             switch (choice)
             {
             case 1:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Create Project");
                 projectManagement.createProject(currentUser);
                 pressEnter();
                 break;
             case 2:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Assign Employees to Projects");
                 projectManagement.assignEmployeesToProjects(currentUser);
                 pressEnter();
                 break;
             case 3:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Track Project Deadlines");
                 projectManagement.trackProjectDeadlines(currentUser);
                 pressEnter();
                 break;
             case 4:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("View Employees Assigned to Projects");
                 projectManagement.viewEmployeesAssignedToProjects(currentUser);
                 pressEnter();
@@ -1702,25 +1732,25 @@ public:
             switch (choice)
             {
             case 1:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Count Total Employees");
                 businessIntelligence.countTotalEmployees(currentUser);
                 pressEnter();
                 break;
             case 2:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Department-wise Employee Statistics");
                 businessIntelligence.departmentWiseEmployeeStatistics(currentUser);
                 pressEnter();
                 break;
             case 3:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Average, Max, and Min Salaries");
                 businessIntelligence.calculateSalaryMetrics(currentUser);
                 pressEnter();
                 break;
             case 4:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Sort Employees");
                 businessIntelligence.sortEmployees(currentUser);
                 pressEnter();
@@ -1746,31 +1776,31 @@ public:
             switch (choice)
             {
             case 1:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Display All Employees");
                 employeeManagement.displayAllEmployees(currentUser);
                 pressEnter();
                 break;
             case 2:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Display One Employee by ID");
                 employeeManagement.displayOneEmployeeByID(currentUser);
                 pressEnter();
                 break;
             case 3:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Search Employees");
                 employeeManagement.searchEmployees(currentUser);
                 pressEnter();
                 break;
             case 4:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Save System Data");
                 saveSystemDataToFile("worker_data.xlsx");
                 pressEnter();
                 break; // Call save
             case 5:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Load System Data");
                 loadSystemDataFromFile("worker_data.xlsx");
                 pressEnter();
@@ -1796,13 +1826,13 @@ public:
             switch (choice)
             {
             case 1:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Add New User");
                 loginSystem.addUser(currentUser);
                 pressEnter();
                 break;
             case 2:
-            system("cls");
+                system("cls");
                 printHeaderStyle1("Manage User Roles and Credentials");
                 loginSystem.manageUserRolesAndCredentials(currentUser);
                 pressEnter();
@@ -1831,7 +1861,6 @@ public:
 
             if (currentUser)
             {
-                pressEnter();
                 switch (choice)
                 {
                 case 1:

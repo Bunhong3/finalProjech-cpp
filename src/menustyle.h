@@ -37,7 +37,7 @@ void printHeaderStyle2(const string &title)
 void printHeaderStyle3(const string &title)
 {
     string arrows = "<" + string(title.length() + 4, '-') + ">";
-    cout << "\n\033[1;31m" << arrows << "\n";
+    cout << "\n\033[1;35m" << arrows << "\n";
     cout << "|  " << title << "  |\n";
     cout << arrows << "\033[0m\n\n";
 }
@@ -320,5 +320,25 @@ void menuUM()
     cout << t << endl;
     cout << bold_blue(">> Enter choice: ");
 } 
-
+// menu login
+void menuLogin()
+{
+    vector<string> menuMain = {
+        "Exit"};
+    Table t;
+    t.add_row({"1", "Login"});
+    for (int i = 0; i < menuMain.size(); i++)
+    {
+        t.add_row({to_string(i + 2), menuMain[i]});
+    }
+    t[0].format().font_align(FontAlign::center);
+    t[0].format().font_color(Color::yellow);
+    for (int i = 1; i <= menuMain.size(); i++)
+    {
+        if (i == 1) // Exit option
+            t[i][1].format().font_color(Color::red);
+    }
+    cout << t << endl;
+    cout << bold_blue(">> Enter choice: ");
+}
 #endif
