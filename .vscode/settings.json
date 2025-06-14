@@ -1,22 +1,3 @@
 {
-    "cmake.sourceDirectory": "D:/Rean/IT/Main Project-final/test/Final_destination/src",
-    "files.associations": {
-        "iostream": "cpp",
-        "vector": "cpp",
-        "random": "cpp",
-        "chrono": "cpp",
-        "format": "cpp",
-        "thread": "cpp",
-        "string": "cpp",
-        "xstring": "cpp",
-        "iomanip": "cpp",
-        "algorithm": "cpp",
-        "complex": "cpp",
-        "functional": "cpp",
-        "optional": "cpp",
-        "system_error": "cpp",
-        "type_traits": "cpp",
-        "xtr1common": "cpp",
-        "xutility": "cpp"
-    }
+    "cmake.sourceDirectory": "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src"
 }

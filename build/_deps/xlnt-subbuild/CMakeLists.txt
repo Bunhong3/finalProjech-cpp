@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(xlnt-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/tfussell/xlnt.git" "GIT_TAG" "v1.5.0"
-                    SOURCE_DIR          "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src"
-                    BINARY_DIR          "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build"
+                    SOURCE_DIR          "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src"
+                    BINARY_DIR          "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

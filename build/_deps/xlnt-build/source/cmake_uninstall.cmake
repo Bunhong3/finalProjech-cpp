@@ -1,8 +1,8 @@
-if(NOT EXISTS "D:/Rean/IT/Main Project-final/test/Final_destination/build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: D:/Rean/IT/Main Project-final/test/Final_destination/build/install_manifest.txt")
-endif(NOT EXISTS "D:/Rean/IT/Main Project-final/test/Final_destination/build/install_manifest.txt")
+if(NOT EXISTS "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/install_manifest.txt")
+endif(NOT EXISTS "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/install_manifest.txt")
 
-file(READ "D:/Rean/IT/Main Project-final/test/Final_destination/build/install_manifest.txt" files)
+file(READ "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")

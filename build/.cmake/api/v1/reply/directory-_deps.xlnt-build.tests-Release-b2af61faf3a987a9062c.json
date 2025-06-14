@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/xlnt-build/tests",
+		"source" : "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/tests"
+	}
+}

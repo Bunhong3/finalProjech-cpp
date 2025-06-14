@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(tabulate-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/p-ranav/tabulate.git" "GIT_TAG" "master"
-                    SOURCE_DIR          "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/tabulate-src"
-                    BINARY_DIR          "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/tabulate-build"
+                    SOURCE_DIR          "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-src"
+                    BINARY_DIR          "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

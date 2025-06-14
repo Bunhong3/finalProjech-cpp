@@ -1,8 +1,8 @@
-# Install script for directory: D:/Rean/IT/Main Project-final/test/Final_destination/src
+# Install script for directory: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/Main Project-final/test/Final_destination/build/installed")
+  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/installed")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/cmake_install.cmake")
+  include("D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/tabulate-build/cmake_install.cmake")
+  include("D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Rean/IT/Main Project-final/test/Final_destination/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

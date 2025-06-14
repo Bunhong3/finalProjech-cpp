@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\cc51aeaf8d702074ea9c90db9315bf1c\uninstall.rule">
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\b4467f2e54148a1c42ada72815eac4eb\uninstall.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\source\CMakeLists.txt" />
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\CMakeFiles\uninstall" />
+    <None Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\CMakeFiles\uninstall" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{DDB31CBD-2BAE-33B6-A284-F64CA9B0628C}</UniqueIdentifier>
+      <UniqueIdentifier>{B8B2D677-F358-3AAB-B62D-A3F99F8D2E29}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

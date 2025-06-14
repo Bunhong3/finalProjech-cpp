@@ -7,9 +7,9 @@ Id flags:
 The output was:
 0
 MSBuild version 17.14.10+8b8e13593 for .NET Framework
-Build started 6/13/2025 2:52:40 AM.
+Build started 6/14/2025 9:06:17 PM.
 
-Project "D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Project "D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -22,7 +22,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.exe
+  CompilerIdC.vcxproj -> D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -30,20 +30,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.97
+Time Elapsed 00:00:01.40
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "D:/Rean/IT/Main Project-final/test/Final_destination/build/CMakeFiles/3.22.1/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/3.22.1/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -53,9 +53,9 @@ Id flags:
 The output was:
 0
 MSBuild version 17.14.10+8b8e13593 for .NET Framework
-Build started 6/13/2025 2:52:42 AM.
+Build started 6/14/2025 9:06:19 PM.
 
-Project "D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Project "D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -68,7 +68,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -76,44 +76,44 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.86
+Time Elapsed 00:00:00.99
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "D:/Rean/IT/Main Project-final/test/Final_destination/build/CMakeFiles/3.22.1/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/3.22.1/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/Rean/IT/Main Project-final/test/Final_destination/build/CMakeFiles/CMakeTmp
+Change Dir: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_07edf.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.10+8b8e13593 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_837bb.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.10+8b8e13593 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35208 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_07edf.dir\Debug\\" /Fd"cmTC_07edf.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_837bb.dir\Debug\\" /Fd"cmTC_837bb.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
   CMakeCCompilerABI.c
-  cmTC_07edf.vcxproj -> D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\CMakeTmp\Debug\cmTC_07edf.exe
+  cmTC_837bb.vcxproj -> D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_837bb.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/Rean/IT/Main Project-final/test/Final_destination/build/CMakeFiles/CMakeTmp
+Change Dir: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1734d.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.10+8b8e13593 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_3a652.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.10+8b8e13593 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35208 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1734d.dir\Debug\\" /Fd"cmTC_1734d.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_3a652.dir\Debug\\" /Fd"cmTC_3a652.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
   CMakeCXXCompilerABI.cpp
-  cmTC_1734d.vcxproj -> D:\Rean\IT\Main Project-final\test\Final_destination\build\CMakeFiles\CMakeTmp\Debug\cmTC_1734d.exe
+  cmTC_3a652.vcxproj -> D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\CMakeTmp\Debug\cmTC_3a652.exe
 
 
 

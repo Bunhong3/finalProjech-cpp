@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E34FE782-EEB9-31FA-B474-35AFFAB58D38}</ProjectGuid>
+    <ProjectGuid>{5CB8DE67-B166-37F4-ADFF-97DD683DAA6A}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>win32</Platform>
@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -95,10 +95,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;LIBSTUDXML_STATIC_LIB=1;_CRT_SECURE_NO_WARNINGS=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -128,10 +128,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBSTUDXML_STATIC_LIB=1;_CRT_SECURE_NO_WARNINGS=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -161,10 +161,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBSTUDXML_STATIC_LIB=1;_CRT_SECURE_NO_WARNINGS=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -193,10 +193,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBSTUDXML_STATIC_LIB=1;_CRT_SECURE_NO_WARNINGS=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,11 +208,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\CMakeLists.txt">
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -221,11 +221,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -234,11 +234,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -247,11 +247,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/Final_destination/src" "-BD:/Rean/IT/Main Project-final/test/Final_destination/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/third-party/libstudxml/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -260,41 +260,41 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\parser.cxx" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\qname.cxx" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\serializer.cxx" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\value-traits.cxx" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\content.hxx" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\exception.hxx" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\forward.hxx" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\genx\char-props.c" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\genx\genx.c" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\genx\genx.h" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmlparse.c" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmlrole.c" />
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmltok.c" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\ascii.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\asciitab.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\config.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\expat_external.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\expat.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\iasciitab.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\internal.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\latin1tab.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\nametab.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\utf8tab.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmlrole.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmltok_impl.h" />
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmltok.h" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\parser.cxx" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\qname.cxx" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\serializer.cxx" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\value-traits.cxx" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\content.hxx" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\exception.hxx" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\forward.hxx" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\genx\char-props.c" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\genx\genx.c" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\genx\genx.h" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmlparse.c" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmlrole.c" />
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmltok.c" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\ascii.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\asciitab.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\config.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\expat_external.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\expat.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\iasciitab.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\internal.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\latin1tab.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\nametab.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\utf8tab.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmlrole.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmltok_impl.h" />
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\third-party\libstudxml\libstudxml\details\expat\xmltok.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\ZERO_CHECK.vcxproj">
-      <Project>{AB686B47-91AF-346D-8DE5-DB1E133FA995}</Project>
+    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\ZERO_CHECK.vcxproj">
+      <Project>{B4F6A32A-2A07-3201-831A-D84D60AF5FA9}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

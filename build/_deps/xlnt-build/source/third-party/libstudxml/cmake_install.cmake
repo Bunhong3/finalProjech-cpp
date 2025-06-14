@@ -1,8 +1,8 @@
-# Install script for directory: D:/Rean/IT/Main Project-final/test/Final_destination/build/_deps/xlnt-src/third-party/libstudxml
+# Install script for directory: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/Main Project-final/test/Final_destination/build/installed")
+  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/installed")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

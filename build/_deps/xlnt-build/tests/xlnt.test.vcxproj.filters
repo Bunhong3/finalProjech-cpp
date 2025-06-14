@@ -1,173 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\runner.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\runner.cpp">
       <Filter>runner</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\cell\cell_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\cell\cell_test_suite.cpp">
       <Filter>tests\cell</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\cell\index_types_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\cell\index_types_test_suite.cpp">
       <Filter>tests\cell</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\cell\rich_text_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\cell\rich_text_test_suite.cpp">
       <Filter>tests\cell</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\drawing\drawing_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\drawing\drawing_test_suite.cpp">
       <Filter>tests\drawing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\detail\numeric_util_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\detail\numeric_util_test_suite.cpp">
       <Filter>tests\detail</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\alignment_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\alignment_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\color_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\color_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\conditional_format_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\conditional_format_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\fill_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\fill_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\number_format_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\number_format_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\protection_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\protection_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\styles\style_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\styles\style_test_suite.cpp">
       <Filter>tests\styles</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\datetime_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\utils\datetime_test_suite.cpp">
       <Filter>tests\utils</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\helper_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\utils\helper_test_suite.cpp">
       <Filter>tests\utils</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\optional_tests.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\utils\optional_tests.cpp">
       <Filter>tests\utils</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\path_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\utils\path_test_suite.cpp">
       <Filter>tests\utils</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\timedelta_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\utils\timedelta_test_suite.cpp">
       <Filter>tests\utils</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\utils\variant_tests.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\utils\variant_tests.cpp">
       <Filter>tests\utils</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\workbook\named_range_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\workbook\named_range_test_suite.cpp">
       <Filter>tests\workbook</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\workbook\serialization_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\workbook\serialization_test_suite.cpp">
       <Filter>tests\workbook</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\workbook\workbook_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\workbook\workbook_test_suite.cpp">
       <Filter>tests\workbook</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\worksheet\page_setup_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\worksheet\page_setup_test_suite.cpp">
       <Filter>tests\worksheet</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\worksheet\range_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\worksheet\range_test_suite.cpp">
       <Filter>tests\worksheet</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\worksheet\worksheet_test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\worksheet\worksheet_test_suite.cpp">
       <Filter>tests\worksheet</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\test_suite.cpp">
+    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\test_suite.cpp">
       <Filter>helpers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\assertions.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\assertions.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\path_helper.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\path_helper.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\temporary_directory.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\temporary_directory.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\temporary_file.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\temporary_file.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\test_suite.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\test_suite.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\timing.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\timing.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\helpers\xml_helper.hpp">
+    <ClInclude Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\helpers\xml_helper.hpp">
       <Filter>helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-src\tests\CMakeLists.txt" />
+    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\parser.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\parser.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\qname.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\qname.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\serializer.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\serializer.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\value-traits.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\value-traits.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\char-props.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\char-props.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\genx.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\genx.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlparse.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlparse.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlrole.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmlrole.obj">
       <Filter>Object Libraries</Filter>
     </Object>
-    <Object Include="D:\Rean\IT\Main Project-final\test\Final_destination\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmltok.obj">
+    <Object Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\third-party\libstudxml\libstudxml.dir\$(Configuration)\xmltok.obj">
       <Filter>Object Libraries</Filter>
     </Object>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Object Libraries">
-      <UniqueIdentifier>{3627F7BC-6345-344A-82A8-6067FEB0C8F2}</UniqueIdentifier>
+      <UniqueIdentifier>{47167812-D983-3603-9AC0-30322738D57F}</UniqueIdentifier>
     </Filter>
     <Filter Include="helpers">
-      <UniqueIdentifier>{9FCB95EB-2145-3C10-9AA7-204C239A6189}</UniqueIdentifier>
+      <UniqueIdentifier>{BB261FFD-BB71-3B87-BA64-C75DFE40A079}</UniqueIdentifier>
     </Filter>
     <Filter Include="runner">
-      <UniqueIdentifier>{55F73256-6962-3208-AEC7-1663DB06A5DC}</UniqueIdentifier>
+      <UniqueIdentifier>{65576329-99E0-3FE6-8786-B877D8111FB9}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests">
-      <UniqueIdentifier>{AC0E2058-B289-31D5-9B3A-E36C82B9CD8E}</UniqueIdentifier>
+      <UniqueIdentifier>{B66383D3-053C-37B9-B72F-57BCF4177D76}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\cell">
-      <UniqueIdentifier>{21D9048D-CE7C-3129-BC46-70B11CA30DFE}</UniqueIdentifier>
+      <UniqueIdentifier>{3417000D-01DB-310F-8738-D7F3F5169697}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\detail">
-      <UniqueIdentifier>{D0C4EC19-6BC9-31FC-A25A-F0C99797F5FE}</UniqueIdentifier>
+      <UniqueIdentifier>{D72E2BE5-9967-3263-82A1-78B46A86DF61}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\drawing">
-      <UniqueIdentifier>{539FF839-4E77-3CCC-AB2D-7863269BE89D}</UniqueIdentifier>
+      <UniqueIdentifier>{1F73F82E-FB8B-3F07-92FD-09B3E5C47576}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\styles">
-      <UniqueIdentifier>{75D94AA6-DE3A-3D83-9188-A5488571C87C}</UniqueIdentifier>
+      <UniqueIdentifier>{E7299D49-A1B8-3E15-BB69-8B12A5B90808}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\utils">
-      <UniqueIdentifier>{7F56BD3B-EB06-343B-A363-40730871D87B}</UniqueIdentifier>
+      <UniqueIdentifier>{25658728-6B5A-34C5-ABD5-04D1644B8AC6}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\workbook">
-      <UniqueIdentifier>{4EA576D4-5B09-36D8-8BA0-F519A9FB5CC9}</UniqueIdentifier>
+      <UniqueIdentifier>{24583E06-9224-3348-B894-C490CB2D19D5}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\worksheet">
-      <UniqueIdentifier>{BAD29EBB-4FEE-3C60-A149-7EF8E77C7C6E}</UniqueIdentifier>
+      <UniqueIdentifier>{DDF1330E-A7F0-3F0F-A7CB-E32B61E1AB92}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
