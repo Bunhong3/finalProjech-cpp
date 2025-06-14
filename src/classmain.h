@@ -1,13 +1,13 @@
 #ifndef CLASSMAIN_H
 #define CLASSMAIN_H
 #include "header.h"
-#include <string>  // For std::string
+#include <string> // For std::string
 #include <vector>
 #include <map>
 #include <algorithm>
-#include <sstream> // For std::ostringstream
-#include <fstream> // For std::ofstream and std::ifstream (auto-save)
-#include <iomanip> // For std::fixed and std::setprecision
+#include <sstream>       // For std::ostringstream
+#include <fstream>       // For std::ofstream and std::ifstream (auto-save)
+#include <iomanip>       // For std::fixed and std::setprecision
 #include <xlnt/xlnt.hpp> // Required for Excel operations
 
 // Forward declarations to resolve circular dependencies
@@ -62,7 +62,7 @@ public:
     string department;
     string position;
     double salary;
-    string hiringStatus;      // e.g., Applied, Hired, Active
+    string hiringStatus;        // e.g., Applied, Hired, Active
     map<Date, bool> attendance; // Date -> Present/Absent
     double hoursWorked;
     double vacationDays;
@@ -262,10 +262,14 @@ public:
 
         switch (choice)
         {
-        case 1: return ADMIN;
-        case 2: return MANAGER;
-        case 3: return VIEWER;
-        default: return VIEWER;
+        case 1:
+            return ADMIN;
+        case 2:
+            return MANAGER;
+        case 3:
+            return VIEWER;
+        default:
+            return VIEWER;
         }
     }
 
@@ -333,9 +337,15 @@ public:
                 cout << bold_cyan("Role: ");
                 switch (currentUser->role)
                 {
-                case ADMIN: cout << "Admin"; break;
-                case MANAGER: cout << "Manager"; break;
-                case VIEWER: cout << "Viewer"; break;
+                case ADMIN:
+                    cout << "Admin";
+                    break;
+                case MANAGER:
+                    cout << "Manager";
+                    break;
+                case VIEWER:
+                    cout << "Viewer";
+                    break;
                 }
                 cout << endl;
                 pressEnter();
@@ -356,9 +366,12 @@ public:
 
     // --- Admin User Management Functions ---
 
-    void addUser(const string& username, const string& password, UserRole role) {
-        for (const auto& user : users) {
-            if (user.username == username) {
+    void addUser(const string &username, const string &password, UserRole role)
+    {
+        for (const auto &user : users)
+        {
+            if (user.username == username)
+            {
                 cout << "User '" << username << "' already exists." << endl;
                 return;
             }
@@ -368,45 +381,63 @@ public:
         cout << "User '" << username << "' added successfully." << endl;
     }
 
-    void deleteUser(const string& username) {
-        if (currentUser && currentUser->username == username) {
+    void deleteUser(const string &username)
+    {
+        if (currentUser && currentUser->username == username)
+        {
             cout << "Cannot delete the currently logged-in user." << endl;
             return;
         }
-        
-        auto it = remove_if(users.begin(), users.end(), [&](const User& user){
-            return user.username == username;
-        });
 
-        if (it != users.end()) {
+        auto it = remove_if(users.begin(), users.end(), [&](const User &user)
+                            { return user.username == username; });
+
+        if (it != users.end())
+        {
             users.erase(it, users.end());
             saveUsersToCSV(); // Auto-save
             cout << "User '" << username << "' deleted successfully." << endl;
-        } else {
+        }
+        else
+        {
             cout << "User '" << username << "' not found." << endl;
         }
     }
 
-    void manageUserRole(const string& username) {
-        for (auto& user : users) {
-            if (user.username == username) {
+    void manageUserRole(const string &username)
+    {
+        for (auto &user : users)
+        {
+            if (user.username == username)
+            {
                 cout << "Current role for '" << username << "': ";
-                switch (user.role) {
-                    case ADMIN: cout << "Admin"; break;
-                    case MANAGER: cout << "Manager"; break;
-                    case VIEWER: cout << "Viewer"; break;
+                switch (user.role)
+                {
+                case ADMIN:
+                    cout << "Admin";
+                    break;
+                case MANAGER:
+                    cout << "Manager";
+                    break;
+                case VIEWER:
+                    cout << "Viewer";
+                    break;
                 }
                 cout << endl;
 
                 cout << "Select new role:" << endl;
                 UserRole newRole = selectRole();
-                
-                if (user.role == ADMIN) {
+
+                if (user.role == ADMIN)
+                {
                     int adminCount = 0;
-                    for (const auto& u : users) {
-                        if (u.role == ADMIN) adminCount++;
+                    for (const auto &u : users)
+                    {
+                        if (u.role == ADMIN)
+                            adminCount++;
                     }
-                    if (adminCount <= 1 && newRole != ADMIN) {
+                    if (adminCount <= 1 && newRole != ADMIN)
+                    {
                         cout << "Cannot demote the last admin." << endl;
                         return;
                     }
@@ -421,24 +452,34 @@ public:
         cout << "User '" << username << "' not found." << endl;
     }
 
-    void displayAllUsers() const {
+    void displayAllUsers() const
+    {
         Table user_table;
         user_table.add_row({"Username", "Role"});
         user_table[0].format().font_style({FontStyle::bold});
 
-        for (const auto& user : users) {
+        for (const auto &user : users)
+        {
             string roleStr;
-            switch(user.role) {
-                case ADMIN: roleStr = "Admin"; break;
-                case MANAGER: roleStr = "Manager"; break;
-                case VIEWER: roleStr = "Viewer"; break;
+            switch (user.role)
+            {
+            case ADMIN:
+                roleStr = "Admin";
+                break;
+            case MANAGER:
+                roleStr = "Manager";
+                break;
+            case VIEWER:
+                roleStr = "Viewer";
+                break;
             }
             user_table.add_row({user.username, roleStr});
         }
         cout << user_table << endl;
     }
-    
-    void exportUsersToExcel(const std::string& filePath) const {
+
+    void exportUsersToExcel(const std::string &filePath) const
+    {
         xlnt::workbook wb;
         xlnt::worksheet ws = wb.active_sheet();
         ws.title("Users");
@@ -446,32 +487,44 @@ public:
         ws.cell("A1").value("Username");
         ws.cell("B1").value("Password");
         ws.cell("C1").value("Role");
-        
+
         int row = 2;
-        for (const auto& user : users) {
+        for (const auto &user : users)
+        {
             ws.cell("A" + std::to_string(row)).value(user.username);
             ws.cell("B" + std::to_string(row)).value(user.password);
-            
+
             std::string roleStr;
-            switch(user.role) {
-                case ADMIN: roleStr = "Admin"; break;
-                case MANAGER: roleStr = "Manager"; break;
-                case VIEWER: roleStr = "Viewer"; break;
-                default: roleStr = "Unknown"; break;
+            switch (user.role)
+            {
+            case ADMIN:
+                roleStr = "Admin";
+                break;
+            case MANAGER:
+                roleStr = "Manager";
+                break;
+            case VIEWER:
+                roleStr = "Viewer";
+                break;
+            default:
+                roleStr = "Unknown";
+                break;
             }
             ws.cell("C" + std::to_string(row)).value(roleStr);
             row++;
         }
 
-        try {
+        try
+        {
             wb.save(filePath);
             std::cout << "User data successfully exported to: " << filePath << std::endl;
-        } catch (const std::exception& e) {
+        }
+        catch (const std::exception &e)
+        {
             std::cerr << "Error saving Excel file: " << e.what() << std::endl;
         }
     }
 };
-
 
 // 2. Employee Management (Process Management + Base Employee Features)
 class EmployeeManagement
@@ -563,7 +616,8 @@ public:
         cout << "Enter employee ID to delete: ";
         cin >> id;
 
-        auto it = remove_if(employees.begin(), employees.end(), [id](const Employee &emp) { return emp.id == id; });
+        auto it = remove_if(employees.begin(), employees.end(), [id](const Employee &emp)
+                            { return emp.id == id; });
 
         if (it != employees.end())
         {
@@ -1381,15 +1435,18 @@ public:
 
         if (sortBy == "name")
         {
-            sort(employees.begin(), employees.end(), [](const Employee &a, const Employee &b) { return a.name < b.name; });
+            sort(employees.begin(), employees.end(), [](const Employee &a, const Employee &b)
+                 { return a.name < b.name; });
         }
         else if (sortBy == "salary")
         {
-            sort(employees.begin(), employees.end(), [](const Employee &a, const Employee &b) { return a.salary < b.salary; });
+            sort(employees.begin(), employees.end(), [](const Employee &a, const Employee &b)
+                 { return a.salary < b.salary; });
         }
         else if (sortBy == "department")
         {
-            sort(employees.begin(), employees.end(), [](const Employee &a, const Employee &b) { return a.department < b.department; });
+            sort(employees.begin(), employees.end(), [](const Employee &a, const Employee &b)
+                 { return a.department < b.department; });
         }
         else
         {
@@ -1609,9 +1666,9 @@ public:
                 emp.assignedProjectId = row[11].value<int>();
                 employees.push_back(emp);
             }
-            
+
             // NOTE: Users are now loaded from users.csv, not the Excel file.
-            
+
             // Clients
             auto client_ws = wb.sheet_by_title("Clients");
             for (auto row : client_ws.rows(false))
@@ -1636,7 +1693,6 @@ public:
             cout << "Note: Could not load " << filename << ". It may not exist yet." << endl;
         }
     }
-
 
     void showMainMenu()
     {
@@ -1665,12 +1721,34 @@ public:
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printtHeader("Add New Employee"); employeeManagement.addEmployee(currentUser); pressEnter(); break;
-            case 2: system("cls"); printtHeader("Update Employee Details"); employeeManagement.updateEmployeeDetails(currentUser); pressEnter(); break;
-            case 3: system("cls"); printtHeader("Delete Employee Record"); employeeManagement.deleteEmployeeRecord(currentUser); pressEnter(); break;
-            case 4: system("cls"); printtHeader("Set Hiring Status"); employeeManagement.setHiringStatus(currentUser); pressEnter(); break;
-            case 5: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printtHeader("Add New Employee");
+                employeeManagement.addEmployee(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printtHeader("Update Employee Details");
+                employeeManagement.updateEmployeeDetails(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printtHeader("Delete Employee Record");
+                employeeManagement.deleteEmployeeRecord(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                system("cls");
+                printtHeader("Set Hiring Status");
+                employeeManagement.setHiringStatus(currentUser);
+                pressEnter();
+                break;
+            case 5:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
         } while (choice != 5);
     }
@@ -1685,12 +1763,34 @@ public:
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printHeaderStyle1("Assign Employee to Department"); resourceManagement.assignEmployeeToDepartment(currentUser); pressEnter(); break;
-            case 2: system("cls"); printHeaderStyle1("View Resource Allocation per Department"); resourceManagement.viewResourceAllocationPerDepartment(currentUser); pressEnter(); break;
-            case 3: system("cls"); printHeaderStyle1("Reassign Employees between Departments"); resourceManagement.reassignEmployeesBetweenDepartments(currentUser); pressEnter(); break;
-            case 4: system("cls"); printHeaderStyle1("View Position/Role Distribution"); resourceManagement.viewPositionRoleDistribution(currentUser); pressEnter(); break;
-            case 5: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printHeaderStyle1("Assign Employee to Department");
+                resourceManagement.assignEmployeeToDepartment(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printHeaderStyle1("View Resource Allocation per Department");
+                resourceManagement.viewResourceAllocationPerDepartment(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printHeaderStyle1("Reassign Employees between Departments");
+                resourceManagement.reassignEmployeesBetweenDepartments(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                system("cls");
+                printHeaderStyle1("View Position/Role Distribution");
+                resourceManagement.viewPositionRoleDistribution(currentUser);
+                pressEnter();
+                break;
+            case 5:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
         } while (choice != 5);
     }
@@ -1705,11 +1805,28 @@ public:
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printHeaderStyle1("Record Employee Attendance"); timeManagement.recordEmployeeAttendance(currentUser); pressEnter(); break;
-            case 2: system("cls"); printHeaderStyle1("Track Work Hours or Shifts"); timeManagement.trackWorkHoursOrShifts(currentUser); pressEnter(); break;
-            case 3: system("cls"); printHeaderStyle1("Manage Leave Balances"); timeManagement.manageLeaveBalances(currentUser); pressEnter(); break;
-            case 4: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printHeaderStyle1("Record Employee Attendance");
+                timeManagement.recordEmployeeAttendance(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printHeaderStyle1("Track Work Hours or Shifts");
+                timeManagement.trackWorkHoursOrShifts(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printHeaderStyle1("Manage Leave Balances");
+                timeManagement.manageLeaveBalances(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
         } while (choice != 4);
     }
@@ -1724,12 +1841,34 @@ public:
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printHeaderStyle1("Add Client Record"); clientRelationshipManagement.addClientRecord(currentUser); pressEnter(); break;
-            case 2: system("cls"); printHeaderStyle1("Assign Employees to Clients/Accounts"); clientRelationshipManagement.assignEmployeesToClientsAccounts(currentUser); pressEnter(); break;
-            case 3: system("cls"); printHeaderStyle1("Track Client-Specific Projects or Contacts"); clientRelationshipManagement.trackClientSpecificProjectsOrContacts(currentUser); pressEnter(); break;
-            case 4: system("cls"); printHeaderStyle1("View All Clients"); clientRelationshipManagement.displayAllClients(currentUser); pressEnter(); break;
-            case 5: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printHeaderStyle1("Add Client Record");
+                clientRelationshipManagement.addClientRecord(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printHeaderStyle1("Assign Employees to Clients/Accounts");
+                clientRelationshipManagement.assignEmployeesToClientsAccounts(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printHeaderStyle1("Track Client-Specific Projects or Contacts");
+                clientRelationshipManagement.trackClientSpecificProjectsOrContacts(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                system("cls");
+                printHeaderStyle1("View All Clients");
+                clientRelationshipManagement.displayAllClients(currentUser);
+                pressEnter();
+                break;
+            case 5:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
         } while (choice != 5);
     }
@@ -1744,12 +1883,34 @@ public:
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printHeaderStyle1("Create Project"); projectManagement.createProject(currentUser); pressEnter(); break;
-            case 2: system("cls"); printHeaderStyle1("Assign Employees to Projects"); projectManagement.assignEmployeesToProjects(currentUser); pressEnter(); break;
-            case 3: system("cls"); printHeaderStyle1("Track Project Deadlines"); projectManagement.trackProjectDeadlines(currentUser); pressEnter(); break;
-            case 4: system("cls"); printHeaderStyle1("View Employees Assigned to Projects"); projectManagement.viewEmployeesAssignedToProjects(currentUser); pressEnter(); break;
-            case 5: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printHeaderStyle1("Create Project");
+                projectManagement.createProject(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printHeaderStyle1("Assign Employees to Projects");
+                projectManagement.assignEmployeesToProjects(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printHeaderStyle1("Track Project Deadlines");
+                projectManagement.trackProjectDeadlines(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                system("cls");
+                printHeaderStyle1("View Employees Assigned to Projects");
+                projectManagement.viewEmployeesAssignedToProjects(currentUser);
+                pressEnter();
+                break;
+            case 5:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
         } while (choice != 5);
     }
@@ -1764,12 +1925,34 @@ public:
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printHeaderStyle1("Count Total Employees"); businessIntelligence.countTotalEmployees(currentUser); pressEnter(); break;
-            case 2: system("cls"); printHeaderStyle1("Department-wise Employee Statistics"); businessIntelligence.departmentWiseEmployeeStatistics(currentUser); pressEnter(); break;
-            case 3: system("cls"); printHeaderStyle1("Average, Max, and Min Salaries"); businessIntelligence.calculateSalaryMetrics(currentUser); pressEnter(); break;
-            case 4: system("cls"); printHeaderStyle1("Sort Employees"); businessIntelligence.sortEmployees(currentUser); pressEnter(); break;
-            case 5: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printHeaderStyle1("Count Total Employees");
+                businessIntelligence.countTotalEmployees(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printHeaderStyle1("Department-wise Employee Statistics");
+                businessIntelligence.departmentWiseEmployeeStatistics(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printHeaderStyle1("Average, Max, and Min Salaries");
+                businessIntelligence.calculateSalaryMetrics(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                system("cls");
+                printHeaderStyle1("Sort Employees");
+                businessIntelligence.sortEmployees(currentUser);
+                pressEnter();
+                break;
+            case 5:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
         } while (choice != 5);
     }
@@ -1780,20 +1963,46 @@ public:
         {
             system("cls");
             printtHeader("Base System Features");
-            menuBF(); 
+            menuBF();
             cin >> choice;
             switch (choice)
             {
-            case 1: system("cls"); printHeaderStyle1("Display All Employees"); employeeManagement.displayAllEmployees(currentUser); pressEnter(); break;
-            case 2: system("cls"); printHeaderStyle1("Display One Employee by ID"); employeeManagement.displayOneEmployeeByID(currentUser); pressEnter(); break;
-            case 3: system("cls"); printHeaderStyle1("Search Employees"); employeeManagement.searchEmployees(currentUser); pressEnter(); break;
-            case 4: system("cls"); printHeaderStyle1("Save System Data"); saveSystemDataToFile("worker_data.xlsx"); pressEnter(); break;
-            case 5: system("cls"); printHeaderStyle1("Load System Data"); loadSystemDataFromFile("worker_data.xlsx"); pressEnter(); break;
-            case 6: { system("cls"); printHeaderStyle1("Export User Data to Excel"); if (currentUser && currentUser->role == ADMIN) { string exportPath; cout << "Enter filename to export user data (e.g., users.xlsx): "; cin >> exportPath; userAuthSystem.exportUsersToExcel(exportPath); } else { cout << "Permission Denied. Only Admins can export user data." << endl; } pressEnter(); } break; 
-            case 7: break;
-            default: cout << "Invalid choice. Please try again." << endl;
+            case 1:
+                system("cls");
+                printHeaderStyle1("Display All Employees");
+                employeeManagement.displayAllEmployees(currentUser);
+                pressEnter();
+                break;
+            case 2:
+                system("cls");
+                printHeaderStyle1("Display One Employee by ID");
+                employeeManagement.displayOneEmployeeByID(currentUser);
+                pressEnter();
+                break;
+            case 3:
+                system("cls");
+                printHeaderStyle1("Search Employees");
+                employeeManagement.searchEmployees(currentUser);
+                pressEnter();
+                break;
+            case 4:
+                system("cls");
+                printHeaderStyle1("Save System Data");
+                saveSystemDataToFile("worker_data.xlsx");
+                pressEnter();
+                break;
+            case 5:
+                system("cls");
+                printHeaderStyle1("Load System Data");
+                loadSystemDataFromFile("worker_data.xlsx");
+                pressEnter();
+                break;
+            case 6:
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
             }
-        } while (choice != 7);
+        } while (choice != 6);
     }
 
     // NEWLY ADDED: User Management Menu for Admins
@@ -1876,7 +2085,8 @@ public:
         do
         {
             showMainMenu();
-            if (!(cin >> choice)) {
+            if (!(cin >> choice))
+            {
                 cout << "Invalid input. Please enter a number." << endl;
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -1888,14 +2098,30 @@ public:
             {
                 switch (choice)
                 {
-                case 1: processManagementMenu(); break;
-                case 2: resourceManagementMenu(); break;
-                case 3: timeManagementMenu(); break;
-                case 4: clientRelationshipManagementMenu(); break;
-                case 5: projectManagementMenu(); break;
-                case 6: businessIntelligenceMenu(); break;
-                case 7: baseSystemFeaturesMenu(); break;
-                case 8: userManagementMenu(); break;
+                case 1:
+                    processManagementMenu();
+                    break;
+                case 2:
+                    resourceManagementMenu();
+                    break;
+                case 3:
+                    timeManagementMenu();
+                    break;
+                case 4:
+                    projectManagementMenu();
+                    break;
+                case 5:
+                    clientRelationshipManagementMenu();
+                    break;
+                case 6:
+                    businessIntelligenceMenu();
+                    break;
+                case 7:
+                    baseSystemFeaturesMenu();
+                    break;
+                case 8:
+                    userManagementMenu();
+                    break;
                 case 9: // NEW: User Management Menu
                     userAuthSystem.logout();
                     break;
@@ -1904,17 +2130,25 @@ public:
                     break;
                 default:
                     cout << "Invalid choice. Please try again." << endl;
-                     pressEnter();
+                    pressEnter();
                 }
             }
             else // User is not logged in
             {
                 switch (choice)
                 {
-                case 1: userAuthSystem.signUp(); break;
-                case 2: userAuthSystem.signIn(); break;
-                case 3: cout << "Exiting Worker Management System. Goodbye!" << endl; break;
-                default: cout << "Invalid choice. Please try again." << endl; pressEnter();
+                case 1:
+                    userAuthSystem.signUp();
+                    break;
+                case 2:
+                    userAuthSystem.signIn();
+                    break;
+                case 3:
+                    cout << "Exiting Worker Management System. Goodbye!" << endl;
+                    break;
+                default:
+                    cout << "Invalid choice. Please try again." << endl;
+                    pressEnter();
                 }
             }
         } while ((currentUser && choice != 10) || (!currentUser && choice != 3));
