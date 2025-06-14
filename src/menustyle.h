@@ -300,8 +300,11 @@ void menuUM()
 {
     vector<string> menuMain = {
         "Add New User",
-        "Manage User Roles and Credentials",
-        "Back to Main Menu"};
+        "Delete User",
+        "Manage User Role",
+        "View All Users",
+        "Back to main menu"
+    };
     Table t;
     t.add_row({"No", "Menu"});
     for (int i = 0; i < menuMain.size(); i++)
@@ -312,7 +315,7 @@ void menuUM()
     t[0].format().font_color(Color::yellow);
     for (int i = 1; i <= menuMain.size(); i++)
     {
-        if (i == 3) // Exit option
+        if (i == 5) // Exit option
             t[i][1].format().font_color(Color::red);
         else
             t[i][1].format().font_color(Color::cyan);
@@ -323,21 +326,20 @@ void menuUM()
 // menu login
 void menuLogin()
 {
-    vector<string> menuMain = {
-        "Exit"};
+    vector<string> menuMain = {"Sign Up", "Sign In", "Exit"};
     Table t;
-    t.add_row({"1", "Login"});
+    t.add_row({"No", "Menu"});
     for (int i = 0; i < menuMain.size(); i++)
     {
-        t.add_row({to_string(i + 2), menuMain[i]});
+        t.add_row({to_string(i + 1), menuMain[i]});
     }
-    t[0].format().font_align(FontAlign::center);
+    t[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center);
     t[0].format().font_color(Color::yellow);
-    for (int i = 1; i <= menuMain.size(); i++)
-    {
-        if (i == 1) // Exit option
-            t[i][1].format().font_color(Color::red);
-    }
+
+    t[1][1].format().font_color(Color::cyan);
+    t[2][1].format().font_color(Color::green);
+    t[3][1].format().font_color(Color::red);
+
     cout << t << endl;
     cout << bold_blue(">> Enter choice: ");
 }
