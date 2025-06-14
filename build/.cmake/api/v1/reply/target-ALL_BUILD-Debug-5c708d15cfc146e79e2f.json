@@ -17,10 +17,10 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "xlnt::@874320f2c4e182ab03bd"
+			"id" : "xlnt.test::@73de1063b4707d31eeab"
 		},
 		{
-			"id" : "xlnt.test::@73de1063b4707d31eeab"
+			"id" : "xlnt::@874320f2c4e182ab03bd"
 		},
 		{
 			"id" : "libstudxml::@adc904478183145f15fa"

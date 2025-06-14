@@ -236,6 +236,7 @@ public:
     {
         currentUser = nullptr;
         cout << yellow("Logged out successfully.") << endl;
+        pressEnter();
     }
 
     void addUser(User *currentLoggedInUser)
@@ -1497,6 +1498,7 @@ public:
     {
         if (!currentUser)
         {
+            system("cls");
             printHeaderStyle3("---|Login System|---");
             menuLogin();
             return;
