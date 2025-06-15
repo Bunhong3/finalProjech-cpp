@@ -1,8 +1,8 @@
-# Install script for directory: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-src
+# Install script for directory: D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/installed")
+  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/installed")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -36,7 +36,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/tabulate/tabulateTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/tabulate/tabulateTargets.cmake"
-         "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-build/CMakeFiles/Export/lib/cmake/tabulate/tabulateTargets.cmake")
+         "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-build/CMakeFiles/Export/lib/cmake/tabulate/tabulateTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/tabulate/tabulateTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -45,17 +45,17 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tabulate" TYPE FILE FILES "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-build/CMakeFiles/Export/lib/cmake/tabulate/tabulateTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tabulate" TYPE FILE FILES "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-build/CMakeFiles/Export/lib/cmake/tabulate/tabulateTargets.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/tabulate" TYPE FILE FILES
-    "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-build/tabulateConfig.cmake"
-    "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-build/tabulateConfigVersion.cmake"
+    "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-build/tabulateConfig.cmake"
+    "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-build/tabulateConfigVersion.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/tabulate-src/include/tabulate" USE_SOURCE_PERMISSIONS REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-src/include/tabulate" USE_SOURCE_PERMISSIONS REGEX "/[^/]*\\.hpp$")
 endif()
 

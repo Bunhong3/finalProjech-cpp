@@ -3,7 +3,6 @@
 #include "textcolor.h"
 #include "menustyle.h"
 #include "classmain.h"
-
 int main()
 {
     WorkerManagementSystem wms;

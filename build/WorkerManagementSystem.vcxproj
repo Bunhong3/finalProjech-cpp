@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C3B3A38C-B1BB-334E-AD46-4F2FBDB67DE1}</ProjectGuid>
+    <ProjectGuid>{97EF4F5D-A9AB-3A1E-92A8-579B69F13A5B}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>win32</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">WorkerManagementSystem.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">WorkerManagementSystem</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">WorkerManagementSystem.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">WorkerManagementSystem</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">WorkerManagementSystem.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">WorkerManagementSystem</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">WorkerManagementSystem.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">WorkerManagementSystem</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,7 +117,7 @@
     <PostBuildEvent>
       <Message>Copying xlnt DLL to output directory...</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/Debug/xlntd.dll" "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/Debug"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-build/source/Debug/xlntd.dll D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -132,8 +132,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/Debug/WorkerManagementSystem.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/Debug/WorkerManagementSystem.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/Debug/WorkerManagementSystem.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/Debug/WorkerManagementSystem.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -142,7 +142,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -160,10 +160,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -173,7 +173,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Copying xlnt DLL to output directory...</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/Release/xlnt.dll" "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/Release"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-build/source/Release/xlnt.dll D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/Release
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -188,8 +188,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/Release/WorkerManagementSystem.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/Release/WorkerManagementSystem.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/Release/WorkerManagementSystem.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/Release/WorkerManagementSystem.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -198,7 +198,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -216,10 +216,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -229,7 +229,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Copying xlnt DLL to output directory...</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/MinSizeRel/xlnt.dll" "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/MinSizeRel"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-build/source/MinSizeRel/xlnt.dll D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -244,8 +244,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/MinSizeRel/WorkerManagementSystem.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/MinSizeRel/WorkerManagementSystem.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/MinSizeRel/WorkerManagementSystem.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/MinSizeRel/WorkerManagementSystem.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -254,7 +254,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -271,10 +271,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-src\source\..\include;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\tabulate-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -284,7 +284,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>Copying xlnt DLL to output directory...</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-build/source/RelWithDebInfo/xlnt.dll" "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/RelWithDebInfo"
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-build/source/RelWithDebInfo/xlnt.dll D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/RelWithDebInfo
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -299,8 +299,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/RelWithDebInfo/WorkerManagementSystem.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/RelWithDebInfo/WorkerManagementSystem.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/RelWithDebInfo/WorkerManagementSystem.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/RelWithDebInfo/WorkerManagementSystem.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -308,11 +308,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\src\CMakeLists.txt">
+    <CustomBuild Include="D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src -BD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build --check-stamp-file D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -320,12 +320,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src -BD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build --check-stamp-file D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -333,12 +333,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src -BD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build --check-stamp-file D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -346,12 +346,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/src" "-BD:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build" --check-stamp-file "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src -BD:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build --check-stamp-file D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -359,23 +359,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\src\main.cpp" />
+    <ClCompile Include="D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\ZERO_CHECK.vcxproj">
-      <Project>{B4F6A32A-2A07-3201-831A-D84D60AF5FA9}</Project>
+    <ProjectReference Include="D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\ZERO_CHECK.vcxproj">
+      <Project>{C8B47B54-7EDF-3330-833D-E4BA014DDDBE}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\xlnt.vcxproj">
-      <Project>{BE8BAF36-64B9-30B6-ADF1-39907E98B2F3}</Project>
+    <ProjectReference Include="D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-build\source\xlnt.vcxproj">
+      <Project>{74A78599-F92E-3439-AA0E-B3D8BE261690}</Project>
       <Name>xlnt</Name>
     </ProjectReference>
   </ItemGroup>

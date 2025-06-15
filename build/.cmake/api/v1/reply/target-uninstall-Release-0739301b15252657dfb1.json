@@ -1,0 +1,72 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/source/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 290,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "uninstall::@874320f2c4e182ab03bd",
+	"name" : "uninstall",
+	"paths" : 
+	{
+		"build" : "_deps/xlnt-build/source",
+		"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/source"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-build/source/CMakeFiles/uninstall",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/CMakeFiles/04b00bede4025bef0b80777a1c2d6778/uninstall.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

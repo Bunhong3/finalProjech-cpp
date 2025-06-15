@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\Debug\ZERO_CHECK</FullPath>
+      <FullPath>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Rean\IT\Main Project-final\test\My test\finalProjech-cpp\build\_deps\xlnt-build\source\Debug\xlntd.dll</FullPath>
+      <FullPath>D:\Rean\IT\finalProjech-cpp\finalProjech-cpp\build\_deps\xlnt-build\source\Debug\xlntd.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

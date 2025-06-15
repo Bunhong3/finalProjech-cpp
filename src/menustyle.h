@@ -59,7 +59,6 @@ void menuMain()
         "Process Management",
         "Resource Management",
         "Time Management",
-        "Project Management",
         "Client Relationship Management",
         "Business Intelligence",
         "Base System Features (Display/Search Employees)",
@@ -76,7 +75,7 @@ void menuMain()
     t[0].format().font_color(Color::yellow);
     for (int i = 1; i <= menuMain.size(); i++)
     {
-        if (i == 10) // Exit option
+        if (i == 9) // Exit option
             t[i][1].format().font_color(Color::red);
         else
             t[i][1].format().font_color(Color::cyan);
@@ -84,8 +83,6 @@ void menuMain()
     cout << t << endl;
     cout << bold_blue(">> Enter choice: ");
 }
-
-
 
 // Process Management  
 void menuPM()
@@ -181,8 +178,8 @@ void menuCRM()
     vector<string> menuMain = {
         "Add Client Record",
         "Assign Employees to Clients/Accounts",
-        "Track Client-Specific Projects or Contacts",
         "View All Clients",
+        "Project Management",
         "Back to Main Menu"};
     Table t;
     t.add_row({"No", "Menu"});
@@ -213,6 +210,8 @@ void menuPMM()
         "Assign Employees to Projects",
         "Track Project Deadlines",
         "View Employees Assigned to Projects",
+        "Delete Project",
+        "Track Client-Specific Projects or Contacts",
         "Back to Main Menu"};
     Table t;
     t.add_row({"No", "Menu"});
@@ -224,7 +223,7 @@ void menuPMM()
     t[0].format().font_color(Color::yellow);
     for (int i = 1; i <= menuMain.size(); i++)
     {
-        if (i == 5) // Exit option
+        if (i == 7) // Exit option
             t[i][1].format().font_color(Color::red);
         else
             t[i][1].format().font_color(Color::cyan);
@@ -271,8 +270,6 @@ void menuBF()
         "Display All Employees",
         "Display One Employee by ID",
         "Search Employees",
-        "Save System Data",
-        "Load System Data",
         "Back to Main Menu"};
     Table t;
     t.add_row({"No", "Menu"});
@@ -284,7 +281,7 @@ void menuBF()
     t[0].format().font_color(Color::yellow);
     for (int i = 1; i <= menuMain.size(); i++)
     {
-        if (i == 6) // Exit option
+        if (i == 4) // Exit option
             t[i][1].format().font_color(Color::red);
         else
             t[i][1].format().font_color(Color::cyan);
@@ -343,4 +340,135 @@ void menuLogin()
     cout << t << endl;
     cout << bold_blue(">> Enter choice: ");
 }
+void printAppLogo()
+{
+   cout<< bold_blue(R"(
+__        __         _                                        
+\ \      / /__  _ __| | _____ _ __                            
+ \ \ /\ / / _ \| '__| |/ / _ \ '__|                           
+  \ V  V / (_) | |  |   <  __/ |                              
+ __\_/\_/ \___/|_|  |_|\_\___|_|                          _   
+|  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___   ___ _ __ | |_ 
+| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __|
+| |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_ 
+|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|
+                          |___/                                                                                   
+ )");cout<< bold_green(R"(
+    --|Menu Feature|--)")<<endl;
+                       
+}
+
+void Process_Management()
+{
+   cout<< bold_blue(R"(
+ ____                                                            
+|  _ \ _ __ ___   ___ ___  ___ ___                               
+| |_) | '__/ _ \ / __/ _ \/ __/ __|                              
+|  __/| | | (_) | (_|  __/\__ \__ \                              
+|_|  _|_|  \___/ \___\___||___/___/                       _      
+|  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___   ___ _ __ | |_    
+| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __|   
+| |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_    
+|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|   
+                          |___/                                  
+                          )")<<endl;
+}
+void Resource_Management()
+{
+   cout<< bold_blue(R"(
+ ____                                                         
+|  _ \ ___  ___  ___  _   _ _ __ ___ ___                      
+| |_) / _ \/ __|/ _ \| | | | '__/ __/ _ \                     
+|  _ <  __/\__ \ (_) | |_| | | | (_|  __/                     
+|_| \_\___||___/\___/ \__,_|_|  \___\___|                 _   
+|  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___   ___ _ __ | |_ 
+| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __|
+| |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_ 
+|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|
+                          |___/                                    
+                          )")<<endl;
+}
+void Time_Management()
+{
+   cout<< bold_blue(R"(
+ _____ _                                                      
+|_   _(_)_ __ ___   ___                                       
+  | | | | '_ ` _ \ / _ \                                      
+  | | | | | | | | |  __/                                      
+ _|_|_|_|_| |_| |_|\___|                                  _   
+|  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___   ___ _ __ | |_ 
+| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __|
+| |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_ 
+|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|
+                          |___/                                      
+                          )")<<endl;
+}
+
+void Client_Relationship_Management ()
+{
+   cout<< bold_blue(R"(
+  ____ _ _            _                                        
+ / ___| (_) ___ _ __ | |_                                      
+| |   | | |/ _ \ '_ \| __|                                     
+| |___| | |  __/ | | | |_                                      
+ \____|_|_|\___|_| |_|\__|               _     _               
+|  _ \ ___| | __ _| |_(_) ___  _ __  ___| |__ (_)_ __          
+| |_) / _ \ |/ _` | __| |/ _ \| '_ \/ __| '_ \| | '_ \         
+|  _ <  __/ | (_| | |_| | (_) | | | \__ \ | | | | |_) |        
+|_| \_\___|_|\__,_|\__|_|\___/|_| |_|___/_| |_|_| .__/    _    
+|  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___   |_| _ __ | |_  
+| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __| 
+| |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_  
+|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|                                     
+                          )")<<endl;
+}
+
+void Base_System_Features()
+{
+   cout<< bold_blue(R"(
+ ____                   ____            _                 
+| __ )  __ _ ___  ___  / ___| _   _ ___| |_ ___ _ __ ___  
+|  _ \ / _` / __|/ _ \ \___ \| | | / __| __/ _ \ '_ ` _ \ 
+| |_) | (_| \__ \  __/  ___) | |_| \__ \ ||  __/ | | | | |
+|____/ \__,_|___/\___| |____/ \__, |___/\__\___|_| |_| |_|
+|  ___|__  __ _| |_ _   _ _ __|___/ ___                   
+| |_ / _ \/ _` | __| | | | '__/ _ \/ __|                  
+|  _|  __/ (_| | |_| |_| | | |  __/\__ \                  
+|_|  \___|\__,_|\__|\__,_|_|  \___||___/                                      
+                          )")<<endl;
+}
+
+void User_Management()
+{
+   cout<< bold_blue(R"(
+ _   _                                                        
+| | | |___  ___ _ __                                          
+| | | / __|/ _ \ '__|                                         
+| |_| \__ \  __/ |                                            
+ \___/|___/\___|_|                                        _   
+|  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___   ___ _ __ | |_ 
+| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __|
+| |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_ 
+|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|
+                          |___/                                    
+                          )")<<endl;
+}
+
+void Business_Intelligence()
+{
+   cout<< bold_blue(R"(
+   ____            _                                
+  | __ ) _   _ ___(_)_ __   ___  ___ ___            
+  |  _ \| | | / __| | '_ \ / _ \/ __/ __|           
+  | |_) | |_| \__ \ | | | |  __/\__ \__ \           
+ _|____/ \__,_|___/_|_|_|_|\___||___/___/
+ ___       _       _   _           
+|_ _|_ __ | |_ ___| | (_) __ _  ___ _ __   ___ ___  
+ | || '_ \| __/ _ \ | | |/ _` |/ _ \ '_ \ / __/ _ \ 
+ | || | | | ||  __/ | | | (_| |  __/ | | | (_|  __/ 
+|___|_| |_|\__\___|_|_|_|\__, |\___|_| |_|\___\___| 
+                         |___/                                           
+                          )")<<endl;
+}
+
 #endif

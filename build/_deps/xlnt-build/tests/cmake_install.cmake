@@ -1,8 +1,8 @@
-# Install script for directory: D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/_deps/xlnt-src/tests
+# Install script for directory: D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/Main Project-final/test/My test/finalProjech-cpp/build/installed")
+  set(CMAKE_INSTALL_PREFIX "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/installed")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

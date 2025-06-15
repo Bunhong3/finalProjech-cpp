@@ -1,0 +1,1216 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build-Debug-6a79cddb9a39f6962c2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/tests",
+					"jsonFile" : "directory-_deps.xlnt-build.tests-Debug-4f5ae5fcd29592c491ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/tests",
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build.source-Debug-e6d27695ea11c722b74e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/source",
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source/third-party/libstudxml",
+					"jsonFile" : "directory-_deps.xlnt-build.source.third-party.libstudxml-Debug-31ad1eb3afdfad24c58a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 4,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml",
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"build" : "_deps/tabulate-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.tabulate-build-Debug-6ba05f5255e5f1fa244e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WorkerManagementSystem",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "xlnt_all",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "xlnt.test",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "xlnt",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "libstudxml",
+					"parentIndex" : 3,
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "tabulate",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-26a17936f18fa739ff46.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@deb7e7b195595d1d88db",
+					"jsonFile" : "target-ALL_BUILD-Debug-69e015130d6a63c91874.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@73de1063b4707d31eeab",
+					"jsonFile" : "target-ALL_BUILD-Debug-5fd7042a0734427ef16c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-ALL_BUILD-Debug-352f1b921c693f7ca2d8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@adc904478183145f15fa",
+					"jsonFile" : "target-ALL_BUILD-Debug-94e47ca656c30e8699dd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@f577248e0aae2aef4ba1",
+					"jsonFile" : "target-ALL_BUILD-Debug-d8a10948b5d1d86ac006.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WorkerManagementSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WorkerManagementSystem-Debug-a4e0d01b34e57f7d9c18.json",
+					"name" : "WorkerManagementSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-26d37d4cebbd901480d5.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libstudxml::@adc904478183145f15fa",
+					"jsonFile" : "target-libstudxml-Debug-cb85657e1c9d921fdd17.json",
+					"name" : "libstudxml",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "uninstall::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-uninstall-Debug-0739301b15252657dfb1.json",
+					"name" : "uninstall",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "xlnt::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-xlnt-Debug-26285ea001b4b77add2b.json",
+					"name" : "xlnt",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "xlnt.test::@73de1063b4707d31eeab",
+					"jsonFile" : "target-xlnt.test-Debug-660b573fad5a07a24cf0.json",
+					"name" : "xlnt.test",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build-Release-6a79cddb9a39f6962c2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/tests",
+					"jsonFile" : "directory-_deps.xlnt-build.tests-Release-4f5ae5fcd29592c491ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/tests",
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build.source-Release-459399243d300f4dbfc3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/source",
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source/third-party/libstudxml",
+					"jsonFile" : "directory-_deps.xlnt-build.source.third-party.libstudxml-Release-31ad1eb3afdfad24c58a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 4,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml",
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"build" : "_deps/tabulate-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.tabulate-build-Release-6ba05f5255e5f1fa244e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WorkerManagementSystem",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "xlnt_all",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "xlnt.test",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "xlnt",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "libstudxml",
+					"parentIndex" : 3,
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "tabulate",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-26a17936f18fa739ff46.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@deb7e7b195595d1d88db",
+					"jsonFile" : "target-ALL_BUILD-Release-69e015130d6a63c91874.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@73de1063b4707d31eeab",
+					"jsonFile" : "target-ALL_BUILD-Release-5fd7042a0734427ef16c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-ALL_BUILD-Release-352f1b921c693f7ca2d8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@adc904478183145f15fa",
+					"jsonFile" : "target-ALL_BUILD-Release-94e47ca656c30e8699dd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@f577248e0aae2aef4ba1",
+					"jsonFile" : "target-ALL_BUILD-Release-d8a10948b5d1d86ac006.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WorkerManagementSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WorkerManagementSystem-Release-d78eecf632bf3e51d766.json",
+					"name" : "WorkerManagementSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-26d37d4cebbd901480d5.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libstudxml::@adc904478183145f15fa",
+					"jsonFile" : "target-libstudxml-Release-eab937cfb14091a50bf3.json",
+					"name" : "libstudxml",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "uninstall::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-uninstall-Release-0739301b15252657dfb1.json",
+					"name" : "uninstall",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "xlnt::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-xlnt-Release-8dd6cfe7597c275c772f.json",
+					"name" : "xlnt",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "xlnt.test::@73de1063b4707d31eeab",
+					"jsonFile" : "target-xlnt.test-Release-2a1c3a29e14c5c070911.json",
+					"name" : "xlnt.test",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build-MinSizeRel-6a79cddb9a39f6962c2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/tests",
+					"jsonFile" : "directory-_deps.xlnt-build.tests-MinSizeRel-4f5ae5fcd29592c491ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/tests",
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build.source-MinSizeRel-221254e66ce11610e966.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/source",
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source/third-party/libstudxml",
+					"jsonFile" : "directory-_deps.xlnt-build.source.third-party.libstudxml-MinSizeRel-31ad1eb3afdfad24c58a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 4,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml",
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"build" : "_deps/tabulate-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.tabulate-build-MinSizeRel-6ba05f5255e5f1fa244e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WorkerManagementSystem",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "xlnt_all",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "xlnt.test",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "xlnt",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "libstudxml",
+					"parentIndex" : 3,
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "tabulate",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-26a17936f18fa739ff46.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@deb7e7b195595d1d88db",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-69e015130d6a63c91874.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@73de1063b4707d31eeab",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-5fd7042a0734427ef16c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-352f1b921c693f7ca2d8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@adc904478183145f15fa",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-94e47ca656c30e8699dd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@f577248e0aae2aef4ba1",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-d8a10948b5d1d86ac006.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WorkerManagementSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WorkerManagementSystem-MinSizeRel-d4ee1dd85eaaefed26bf.json",
+					"name" : "WorkerManagementSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-26d37d4cebbd901480d5.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libstudxml::@adc904478183145f15fa",
+					"jsonFile" : "target-libstudxml-MinSizeRel-30f998dc024fa1304e66.json",
+					"name" : "libstudxml",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "uninstall::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-uninstall-MinSizeRel-0739301b15252657dfb1.json",
+					"name" : "uninstall",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "xlnt::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-xlnt-MinSizeRel-bd50f30072720c62633f.json",
+					"name" : "xlnt",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "xlnt.test::@73de1063b4707d31eeab",
+					"jsonFile" : "target-xlnt.test-MinSizeRel-ae5a04a6220d9ab43b36.json",
+					"name" : "xlnt.test",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build-RelWithDebInfo-6a79cddb9a39f6962c2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/tests",
+					"jsonFile" : "directory-_deps.xlnt-build.tests-RelWithDebInfo-4f5ae5fcd29592c491ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/tests",
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.xlnt-build.source-RelWithDebInfo-2458b2f29e5c478962a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/source",
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"build" : "_deps/xlnt-build/source/third-party/libstudxml",
+					"jsonFile" : "directory-_deps.xlnt-build.source.third-party.libstudxml-RelWithDebInfo-31ad1eb3afdfad24c58a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 4,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/xlnt-src/third-party/libstudxml",
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"build" : "_deps/tabulate-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.tabulate-build-RelWithDebInfo-6ba05f5255e5f1fa244e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build/_deps/tabulate-src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WorkerManagementSystem",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						7
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "xlnt_all",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "xlnt.test",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						11
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "xlnt",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "libstudxml",
+					"parentIndex" : 3,
+					"targetIndexes" : 
+					[
+						4,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "tabulate",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-26a17936f18fa739ff46.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@deb7e7b195595d1d88db",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-69e015130d6a63c91874.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@73de1063b4707d31eeab",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-5fd7042a0734427ef16c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-352f1b921c693f7ca2d8.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@adc904478183145f15fa",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-94e47ca656c30e8699dd.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@f577248e0aae2aef4ba1",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-d8a10948b5d1d86ac006.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WorkerManagementSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WorkerManagementSystem-RelWithDebInfo-f8f45c5c7b3e9f3da1b4.json",
+					"name" : "WorkerManagementSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-26d37d4cebbd901480d5.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "libstudxml::@adc904478183145f15fa",
+					"jsonFile" : "target-libstudxml-RelWithDebInfo-6f82b7bb6e6d4f26f62b.json",
+					"name" : "libstudxml",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "uninstall::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-uninstall-RelWithDebInfo-0739301b15252657dfb1.json",
+					"name" : "uninstall",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "xlnt::@874320f2c4e182ab03bd",
+					"jsonFile" : "target-xlnt-RelWithDebInfo-e276d36b17907759fb4d.json",
+					"name" : "xlnt",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "xlnt.test::@73de1063b4707d31eeab",
+					"jsonFile" : "target-xlnt.test-RelWithDebInfo-6ddb285767d119c14dcf.json",
+					"name" : "xlnt.test",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/build",
+		"source" : "D:/Rean/IT/finalProjech-cpp/finalProjech-cpp/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

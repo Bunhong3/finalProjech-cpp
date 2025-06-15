@@ -1,20 +1,13 @@
 #ifndef CLASSMAIN_H
 #define CLASSMAIN_H
 #include "header.h"
-#include <string> // For std::string
-#include <vector>
-#include <map>
-#include <algorithm>
-#include <sstream>       // For std::ostringstream
-#include <fstream>       // For std::ofstream and std::ifstream (auto-save)
-#include <iomanip>       // For std::fixed and std::setprecision
-#include <xlnt/xlnt.hpp> // Required for Excel operations
 
 // Forward declarations to resolve circular dependencies
 class Employee;
 class User;
 class Client;
 class Project;
+
 template <typename T>
 std::string to_string_with_precision(const T a_value, const int n = 2)
 {
@@ -22,6 +15,7 @@ std::string to_string_with_precision(const T a_value, const int n = 2)
     out << std::fixed << std::setprecision(n) << a_value;
     return out.str();
 }
+
 // Enum for user roles
 enum UserRole
 {
@@ -78,7 +72,7 @@ public:
     {
         Table employee_details;
         employee_details.add_row({"Attribute", "Value"});
-        employee_details[0].format().font_style({FontStyle::bold});
+        employee_details[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
         employee_details.add_row({"ID", to_string(id)});
         employee_details.add_row({"Name", name});
         employee_details.add_row({"Department", department});
@@ -130,7 +124,7 @@ public:
     {
         Table client_details;
         client_details.add_row({"Attribute", "Value"});
-        client_details[0].format().font_style({FontStyle::bold});
+        client_details[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
         client_details.add_row({"Client ID", to_string(id)});
         client_details.add_row({"Name", name});
         client_details.add_row({"Contact Person", contactPerson});
@@ -156,7 +150,7 @@ public:
     {
         Table project_details;
         project_details.add_row({"Attribute", "Value"});
-        project_details[0].format().font_style({FontStyle::bold});
+        project_details[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
         project_details.add_row({"Project ID", to_string(id)});
         project_details.add_row({"Name", name});
         project_details.add_row({"Description", description});
@@ -174,8 +168,8 @@ class UserAuthenticationSystem
 private:
     vector<User> &users; // Reference to the main users vector
     User *&currentUser;  // Reference to the main current user pointer
-    const int codeAdmin = 312005;
-    const int codeManager = 200531;
+    const int codeAdmin = 123;
+    const int codeManager =321;
     const string userCsvFile = "users.csv";
 
     // Auto-save user data to CSV
@@ -184,7 +178,7 @@ private:
         ofstream file(userCsvFile);
         if (!file.is_open())
         {
-            cerr << "Error: Could not open " << userCsvFile << " for writing." << endl;
+            cerr << red("Error: Could not open ") << userCsvFile << red(" for writing.") << endl;
             return;
         }
 
@@ -230,7 +224,7 @@ private:
                 }
                 catch (const std::invalid_argument &ia)
                 {
-                    cerr << "Warning: Invalid role format in CSV for user: " << username << endl;
+                    cerr << yellow("Warning: Invalid role format in CSV for user: ") << username << endl;
                 }
             }
         }
@@ -257,7 +251,7 @@ public:
         cout << "1 -> Admin\n";
         cout << "2 -> Manager\n";
         cout << "3 -> Viewer\n";
-        cout << "Choice: ";
+        cout << blue("Choice: ");
         cin >> choice;
 
         switch (choice)
@@ -279,7 +273,7 @@ public:
         UserRole role;
 
         system("cls");
-        printHeaderStyle3("---|Sign up System|---");
+        printtHeader("Sign UP");
         cout << "Enter Username: ";
         cin >> username;
         cout << "Enter Password: ";
@@ -293,7 +287,7 @@ public:
             cin >> code;
             if (code != codeAdmin)
             {
-                cout << "Incorrect Admin Code. Signup failed.\n";
+                cout << red("Incorrect Admin Code. Signup failed.\n");
                 pressEnter();
                 return;
             }
@@ -305,7 +299,7 @@ public:
             cin >> code;
             if (code != codeManager)
             {
-                cout << "Incorrect Manager Code. Signup failed.\n";
+                cout << red("Incorrect Manager Code. Signup failed.\n");
                 pressEnter();
                 return;
             }
@@ -313,7 +307,7 @@ public:
 
         users.emplace_back(username, password, role);
         saveUsersToCSV(); // Auto-save after adding a new user
-        cout << "Signup successful!\n";
+        cout << green("Signup successful!\n");
         pressEnter();
     }
 
@@ -372,20 +366,20 @@ public:
         {
             if (user.username == username)
             {
-                cout << "User '" << username << "' already exists." << endl;
+                cout << red("User '") << username << red("' already exists.") << endl;
                 return;
             }
         }
         users.emplace_back(username, password, role);
         saveUsersToCSV(); // Auto-save
-        cout << "User '" << username << "' added successfully." << endl;
+        cout << green("User '") << username << green("' added successfully.") << endl;
     }
 
     void deleteUser(const string &username)
     {
         if (currentUser && currentUser->username == username)
         {
-            cout << "Cannot delete the currently logged-in user." << endl;
+            cout << red("Cannot delete the currently logged-in user.") << endl;
             return;
         }
 
@@ -396,11 +390,11 @@ public:
         {
             users.erase(it, users.end());
             saveUsersToCSV(); // Auto-save
-            cout << "User '" << username << "' deleted successfully." << endl;
+            cout << green("User '") << username << green("' deleted successfully.") << endl;
         }
         else
         {
-            cout << "User '" << username << "' not found." << endl;
+            cout << red("User '") << username << red("' not found.") << endl;
         }
     }
 
@@ -410,7 +404,7 @@ public:
         {
             if (user.username == username)
             {
-                cout << "Current role for '" << username << "': ";
+                cout << blue("Current role for '") << username << blue("': ");
                 switch (user.role)
                 {
                 case ADMIN:
@@ -425,7 +419,7 @@ public:
                 }
                 cout << endl;
 
-                cout << "Select new role:" << endl;
+                cout << blue("Select new role:") << endl;
                 UserRole newRole = selectRole();
 
                 if (user.role == ADMIN)
@@ -438,25 +432,25 @@ public:
                     }
                     if (adminCount <= 1 && newRole != ADMIN)
                     {
-                        cout << "Cannot demote the last admin." << endl;
+                        cout << red("Cannot demote the last admin.") << endl;
                         return;
                     }
                 }
 
                 user.role = newRole;
                 saveUsersToCSV(); // Auto-save
-                cout << "Role for '" << username << "' updated successfully." << endl;
+                cout << green("Role for '") << username << green("' updated successfully.") << endl;
                 return;
             }
         }
-        cout << "User '" << username << "' not found." << endl;
+        cout << red("User '") << username << red("' not found.") << endl;
     }
 
     void displayAllUsers() const
     {
         Table user_table;
         user_table.add_row({"Username", "Role"});
-        user_table[0].format().font_style({FontStyle::bold});
+        user_table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &user : users)
         {
@@ -517,11 +511,11 @@ public:
         try
         {
             wb.save(filePath);
-            std::cout << "User data successfully exported to: " << filePath << std::endl;
+            std::cout << green("User data successfully exported to: ") << filePath << std::endl;
         }
         catch (const std::exception &e)
         {
-            std::cerr << "Error saving Excel file: " << e.what() << std::endl;
+            std::cerr << red("Error saving Excel file: ") << e.what() << std::endl;
         }
     }
 };
@@ -541,7 +535,7 @@ public:
     {
         if (!currentUser || !currentUser->canAdd())
         {
-            cout << "Permission denied. Only Admins can add employees." << endl;
+            cout << red("Permission denied. Only Admins can add employees.") << endl;
             return;
         }
         string name, department, position;
@@ -553,46 +547,46 @@ public:
         getline(cin, department);
         cout << "Enter Position: ";
         getline(cin, position);
-        cout << "Enter Salary: ";
+        cout << "Enter Salary/M : ";
         cin >> salary;
 
         employees.emplace_back(nextEmployeeId++, name, department, position, salary);
-        cout << "Employee added successfully. ID: " << employees.back().id << endl;
+        cout << green("Employee added successfully. ID: ") << employees.back().id << endl;
     }
 
     void updateEmployeeDetails(User *currentUser)
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied. Only Admins and Managers can update employee details." << endl;
+            cout << red("Permission denied. Only Admins and Managers can update employee details.") << endl;
             return;
         }
         int id;
-        cout << "Enter employee ID to update: ";
+        cout << blue("Enter employee ID to update: ");
         cin >> id;
 
         for (Employee &emp : employees)
         {
             if (emp.id == id)
             {
-                cout << "Enter new Name (or 'nochange'): ";
+                cout << blue("Enter new Name (or 'nochange'): ");
                 string newValue;
                 cin.ignore();
                 getline(cin, newValue);
                 if (newValue != "nochange")
                     emp.name = newValue;
 
-                cout << "Enter new Department (or 'nochange'): ";
+                cout << blue("Enter new Department (or 'nochange'): ");
                 getline(cin, newValue);
                 if (newValue != "nochange")
                     emp.department = newValue;
 
-                cout << "Enter new Position (or 'nochange'): ";
+                cout << blue("Enter new Position (or 'nochange'): ");
                 getline(cin, newValue);
                 if (newValue != "nochange")
                     emp.position = newValue;
 
-                cout << "Enter new Salary (or '0' for nochange'): ";
+                cout << blue("Enter new Salary (or '0' for nochange'): ");
                 double newSalary;
                 cin >> newSalary;
                 if (newSalary != 0)
@@ -602,18 +596,18 @@ public:
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void deleteEmployeeRecord(User *currentUser)
     {
         if (!currentUser || !currentUser->canDelete())
         {
-            cout << "Permission denied. Only Admins can delete employee records." << endl;
+            cout << red("Permission denied. Only Admins can delete employee records.") << endl;
             return;
         }
         int id;
-        cout << "Enter employee ID to delete: ";
+        cout << blue("Enter employee ID to delete: ");
         cin >> id;
 
         auto it = remove_if(employees.begin(), employees.end(), [id](const Employee &emp)
@@ -622,11 +616,11 @@ public:
         if (it != employees.end())
         {
             employees.erase(it, employees.end());
-            cout << "Employee record deleted successfully." << endl;
+            cout << green("Employee record deleted successfully.") << endl;
         }
         else
         {
-            cout << "Employee not found." << endl;
+            cout << red("Employee not found.") << endl;
         }
     }
 
@@ -634,45 +628,45 @@ public:
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied. Only Admins and Managers can set hiring status." << endl;
+            cout << red("Permission denied. Only Admins and Managers can set hiring status.") << endl;
             return;
         }
         int id;
-        cout << "Enter employee ID to set hiring status: ";
+        cout << blue("Enter employee ID to set hiring status: ");
         cin >> id;
 
         for (Employee &emp : employees)
         {
             if (emp.id == id)
             {
-                cout << "Enter new hiring status (e.g., Applied, Hired, Active): ";
+                cout << blue("Enter new hiring status (e.g., Applied, Hired, Active): ");
                 string status;
                 cin >> status;
                 emp.hiringStatus = status;
-                cout << "Hiring status updated successfully." << endl;
+                cout << green("Hiring status updated successfully.") << endl;
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void displayAllEmployees(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
-        cout << "\nAll Employees:" << endl;
+        cout << blue("\nAll Employees:") << endl;
         if (employees.empty())
         {
-            cout << "No employees in the system." << endl;
+            cout << red("No employees in the system.") << endl;
             return;
         }
 
         Table table;
         table.add_row({"ID", "Name", "Department", "Position", "Salary", "Status"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &emp : employees)
         {
@@ -685,40 +679,40 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int id;
-        cout << "Enter employee ID: ";
+        cout << blue("Enter employee ID: ");
         cin >> id;
 
         for (const auto &emp : employees)
         {
             if (emp.id == id)
             {
-                cout << "\nEmployee Details:" << endl;
+                cout << blue("\nEmployee Details:") << endl;
                 emp.display();
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void searchEmployees(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
-        cout << "Search by Name, ID, or Department: ";
+        cout << blue("Search by Name, ID, or Department: ");
         string query;
         cin.ignore(); // Clear buffer
         getline(cin, query);
 
         Table results;
         results.add_row({"ID", "Name", "Department", "Position", "Status"});
-        results[0].format().font_style({FontStyle::bold});
+        results[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         bool found = false;
         for (const auto &emp : employees)
@@ -734,7 +728,7 @@ public:
 
         if (!found)
         {
-            cout << "No employees found matching your query." << endl;
+            cout << red("No employees found matching your query.") << endl;
         }
         else
         {
@@ -756,14 +750,14 @@ public:
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int empId;
         string newDept;
-        cout << "Enter employee ID: ";
+        cout << blue("Enter employee ID: ");
         cin >> empId;
-        cout << "Enter new department: ";
+        cout << blue("Enter new department: ");
         cin.ignore();
         getline(cin, newDept);
 
@@ -772,18 +766,18 @@ public:
             if (emp.id == empId)
             {
                 emp.department = newDept;
-                cout << "Employee " << emp.name << " assigned to " << newDept << " successfully." << endl;
+                cout << green("Employee ") << emp.name << green(" assigned to ") << newDept << green(" successfully.") << endl;
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void viewResourceAllocationPerDepartment(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         map<string, int> departmentCounts;
@@ -794,7 +788,7 @@ public:
 
         Table table;
         table.add_row({"Department", "Number of Employees"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &pair : departmentCounts)
         {
@@ -807,14 +801,14 @@ public:
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int empId;
         string newDept;
-        cout << "Enter employee ID to reassign: ";
+        cout << blue("Enter employee ID to reassign: ");
         cin >> empId;
-        cout << "Enter new department: ";
+        cout << blue("Enter new department: ");
         cin.ignore();
         getline(cin, newDept);
 
@@ -823,18 +817,18 @@ public:
             if (emp.id == empId)
             {
                 emp.department = newDept;
-                cout << "Employee " << emp.name << " reassigned to " << newDept << " successfully." << endl;
+                cout << green("Employee ") << emp.name << green(" reassigned to ") << newDept << green(" successfully.") << endl;
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void viewPositionRoleDistribution(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         map<string, int> positionCounts;
@@ -845,7 +839,7 @@ public:
 
         Table table;
         table.add_row({"Position", "Number of Employees"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &pair : positionCounts)
         {
@@ -868,7 +862,7 @@ public:
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int empId;
@@ -876,38 +870,43 @@ public:
         char presentChar;
         bool present;
 
-        cout << "Enter employee ID: ";
+        cout << blue("Enter employee ID: ");
         cin >> empId;
 
         for (Employee &emp : employees)
         {
             if (emp.id == empId)
             {
-                cout << "Enter date (YYYY MM DD): ";
-                cin >> year >> month >> day;
-                cout << "Is employee present? (y/n): ";
+                cout << blue("Enter date (YYYY MM DD):\n ");
+                cout << blue(">> YYYY: ");
+                cin >> year;
+                cout << blue(">> MM: ");
+                cin >> month;
+                cout << blue(">> DD: ");
+                cin >> day;
+                cout << blue("Is employee present? (y/n): ");
                 cin >> presentChar;
                 present = (presentChar == 'y' || presentChar == 'Y');
                 emp.attendance[{year, month, day}] = present;
-                cout << "Attendance recorded for " << emp.name << " on " << Date{year, month, day}.toString() << ": " << (present ? "Present" : "Absent") << endl;
+                cout << green("Attendance recorded for ") << emp.name << green(" on ") << Date{year, month, day}.toString() << green(": ") << (present ? green("Present") : "Absent") << endl;
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void trackWorkHoursOrShifts(User *currentUser)
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int empId;
         double hours;
-        cout << "Enter employee ID: ";
+        cout << blue("Enter employee ID: ");
         cin >> empId;
-        cout << "Enter hours worked/assigned for a shift: ";
+        cout << blue("Enter hours worked/assigned for a shift: ");
         cin >> hours;
 
         for (Employee &emp : employees)
@@ -915,28 +914,28 @@ public:
             if (emp.id == empId)
             {
                 emp.hoursWorked += hours;
-                cout << "Work hours updated for " << emp.name << ". Total: " << emp.hoursWorked << endl;
+                cout << blue("Work hours updated for ") << emp.name << blue(". Total: ") << emp.hoursWorked << endl;
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 
     void manageLeaveBalances(User *currentUser)
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int empId;
         string leaveType;
         double days;
-        cout << "Enter employee ID: ";
+        cout << blue("Enter employee ID: ");
         cin >> empId;
-        cout << "Enter leave type (vacation, sick, other): ";
+        cout << blue("Enter leave type (vacation, sick, other): ");
         cin >> leaveType;
-        cout << "Enter number of days: ";
+        cout << blue("Enter number of days: ");
         cin >> days;
 
         for (Employee &emp : employees)
@@ -951,17 +950,18 @@ public:
                     emp.otherLeaveDays += days;
                 else
                 {
-                    cout << "Invalid leave type." << endl;
+                    cout << red("Invalid leave type.") << endl;
                     return;
                 }
-                cout << "Leave balance updated for " << emp.name << ". " << leaveType << " days: " << days << endl;
+                cout << blue("Leave balance updated for ") << emp.name << blue(". ") << leaveType << blue(" days: ") << days << endl;
                 return;
             }
         }
-        cout << "Employee not found." << endl;
+        cout << red("Employee not found.") << endl;
     }
 };
 
+// 5. Client Relationship Management
 class ClientRelationshipManagement
 {
 private:
@@ -981,35 +981,35 @@ public:
     {
         if (!currentUser || !currentUser->canAdd())
         {
-            std::cout << "Permission denied." << std::endl;
+            std::cout << red("Permission denied.") << std::endl;
             return;
         }
 
         std::string name, contactPerson, contactEmail;
         std::cin.ignore();
-        std::cout << "Enter Client Name: ";
+        std::cout << blue("Enter Client Name: ");
         std::getline(std::cin, name);
-        std::cout << "Enter Contact Person: ";
+        std::cout << blue("Enter Contact Person: ");
         std::getline(std::cin, contactPerson);
-        std::cout << "Enter Contact Email: ";
+        std::cout << blue("Enter Contact Email: ");
         std::getline(std::cin, contactEmail);
 
         clients.emplace_back(nextClientId++, name, contactPerson, contactEmail);
-        std::cout << "Client record added successfully. ID: " << clients.back().id << std::endl;
+        std::cout << green("Client record added successfully. ID: ") << clients.back().id << std::endl;
     }
 
     void assignEmployeesToClientsAccounts(User *currentUser)
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            std::cout << "Permission denied." << std::endl;
+            std::cout << red("Permission denied.") << std::endl;
             return;
         }
 
         int empId, clientId;
-        std::cout << "Enter Employee ID: ";
+        std::cout << blue("Enter Employee ID: ");
         std::cin >> empId;
-        std::cout << "Enter Client ID to assign: ";
+        std::cout << blue("Enter Client ID to assign: ");
         std::cin >> clientId;
 
         bool empFound = false, clientFound = false;
@@ -1033,32 +1033,30 @@ public:
         }
 
         if (empFound && clientFound)
-            std::cout << "Employee assigned successfully." << std::endl;
+            std::cout << green("Employee assigned successfully.") << std::endl;
         else
-            std::cout << "Employee or Client not found." << std::endl;
+            std::cout << red("Employee or Client not found.") << std::endl;
     }
 
     void displayAllClients(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            std::cout << "Permission denied." << std::endl;
+            std::cout << red("Permission denied.") << std::endl;
             return;
         }
 
         if (clients.empty())
         {
-            std::cout << "No clients found." << std::endl;
+            std::cout << red("No clients found.") << std::endl;
             return;
         }
 
         Table table;
 
-        // Header row
         table.add_row({"Client ID", "Client Name", "Contact Person", "Contact Email"});
         table[0].format().font_style({FontStyle::bold}).font_align(FontAlign::center).font_color(Color::cyan).border_bottom("─");
 
-        // Client rows
         for (const auto &c : clients)
         {
             table.add_row({std::to_string(c.id),
@@ -1067,7 +1065,6 @@ public:
                            c.contactEmail});
         }
 
-        // Center-align all rows
         for (size_t i = 1; i < table.size(); ++i)
         {
             table[i].format().font_align(FontAlign::center);
@@ -1080,12 +1077,12 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            std::cout << "Permission denied." << std::endl;
+            std::cout << red("Permission denied.") << std::endl;
             return;
         }
 
         int clientId;
-        std::cout << "Enter Client ID to view projects/contacts: ";
+        std::cout << blue("Enter Client ID to view projects/contacts: ");
         std::cin >> clientId;
 
         bool clientFound = false;
@@ -1093,7 +1090,7 @@ public:
         {
             if (client.id == clientId)
             {
-                std::cout << "\nClient Details:\n";
+                std::cout << blue("\nClient Details:\n");
                 client.display();
                 clientFound = true;
                 break;
@@ -1102,11 +1099,11 @@ public:
 
         if (!clientFound)
         {
-            std::cout << "Client not found." << std::endl;
+            std::cout << red("Client not found.") << std::endl;
             return;
         }
 
-        std::cout << "\nProjects for Client " << clientId << ":\n";
+        std::cout << blue("\nProjects for Client ") << clientId << ":\n";
 
         Table projects_table;
         projects_table.add_row({"Project ID", "Name", "Deadline", "Description"});
@@ -1124,7 +1121,7 @@ public:
 
         if (!hasProjects)
         {
-            std::cout << "No projects found for this client." << std::endl;
+            std::cout << red("No projects found for this client.") << std::endl;
         }
         else
         {
@@ -1156,11 +1153,11 @@ public:
         try
         {
             wb.save(filePath);
-            std::cout << "Clients exported to Excel successfully to: " << filePath << std::endl;
+            std::cout << green("Clients exported to Excel successfully to: ") << filePath << std::endl;
         }
         catch (const std::exception &e)
         {
-            std::cerr << "Error exporting to Excel: " << e.what() << std::endl;
+            std::cerr << red("Error exporting to Excel: ") << e.what() << std::endl;
         }
     }
 };
@@ -1182,21 +1179,26 @@ public:
     {
         if (!currentUser || !currentUser->canAdd())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         string name, description;
         int year, month, day;
         int clientId;
 
-        cout << "Enter Project Name: ";
+        cout << blue("Enter Project Name: ");
         cin.ignore();
         getline(cin, name);
-        cout << "Enter Description: ";
+        cout << blue("Enter Description: ");
         getline(cin, description);
-        cout << "Enter Deadline (YYYY MM DD): ";
-        cin >> year >> month >> day;
-        cout << "Enter Client ID for this project: ";
+        cout << blue("Enter Deadline(YYYY, MM, DD) \n");
+        cout << blue(">> YYYY: ");
+        cin >> year;
+        cout << blue(">> MM: ");
+        cin >> month;
+        cout << blue(">> DD: ");
+        cin >> day;
+        cout << blue("Enter Client ID for this project: ");
         cin >> clientId;
 
         bool clientExists = false;
@@ -1211,25 +1213,25 @@ public:
 
         if (!clientExists)
         {
-            cout << "Client with ID " << clientId << " not found. Project cannot be created." << endl;
+            cout << red("Client with ID ") << clientId << red(" not found. Project cannot be created.") << endl;
             return;
         }
 
         projects.emplace_back(nextProjectId++, name, description, Date{year, month, day}, clientId);
-        cout << "Project created successfully. ID: " << projects.back().id << endl;
+        cout << green("Project created successfully. ID: ") << projects.back().id << endl;
     }
 
     void assignEmployeesToProjects(User *currentUser)
     {
         if (!currentUser || !currentUser->canUpdate())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int empId, projId;
-        cout << "Enter Employee ID: ";
+        cout << blue("Enter Employee ID: ");
         cin >> empId;
-        cout << "Enter Project ID to assign: ";
+        cout << blue("Enter Project ID to assign: ");
         cin >> projId;
 
         bool empFound = false;
@@ -1256,11 +1258,11 @@ public:
 
         if (empFound && projFound)
         {
-            cout << "Employee " << empId << " assigned to Project " << projId << " successfully." << endl;
+            cout << green("Employee ") << empId << green(" assigned to Project ") << projId << green(" successfully.") << endl;
         }
         else
         {
-            cout << "Employee or Project not found." << endl;
+            cout << red("Employee or Project not found.") << endl;
         }
     }
 
@@ -1268,19 +1270,19 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
-        cout << "\nProject Deadlines:" << endl;
+        cout << blue("\nProject Deadlines:") << endl;
         if (projects.empty())
         {
-            cout << "No projects to display deadlines for." << endl;
+            cout << red("No projects to display deadlines for.") << endl;
             return;
         }
 
         Table table;
         table.add_row({"Project ID", "Name", "Deadline", "Description"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &proj : projects)
         {
@@ -1293,11 +1295,11 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         int projId;
-        cout << "Enter Project ID to view assigned employees: ";
+        cout << blue("Enter Project ID to view assigned employees: ");
         cin >> projId;
 
         bool projectFound = false;
@@ -1306,11 +1308,11 @@ public:
             if (proj.id == projId)
             {
                 projectFound = true;
-                cout << "\nEmployees assigned to Project " << proj.name << " (ID: " << proj.id << "):" << endl;
+                cout << blue("\nEmployees assigned to Project ") << proj.name << blue(" (ID: " << proj.id << "):") << endl;
 
                 Table table;
                 table.add_row({"ID", "Name", "Department", "Position", "Status"});
-                table[0].format().font_style({FontStyle::bold});
+                table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
                 bool assignedFound = false;
 
                 for (const auto &emp : employees)
@@ -1324,7 +1326,7 @@ public:
 
                 if (!assignedFound)
                 {
-                    cout << "No employees assigned to this project." << endl;
+                    cout << red("No employees assigned to this project.") << endl;
                 }
                 else
                 {
@@ -1335,7 +1337,41 @@ public:
         }
         if (!projectFound)
         {
-            cout << "Project not found." << endl;
+            cout << red("Project not found.") << endl;
+        }
+    }
+
+    void deleteProject(User *currentUser)
+    {
+        if (!currentUser || !currentUser->canDelete())
+        {
+            cout << red("Permission denied. Only Admins can delete projects.") << endl;
+            return;
+        }
+
+        int projId;
+        cout << blue("Enter project ID to delete: ");
+        cin >> projId;
+
+        auto it = remove_if(projects.begin(), projects.end(), [projId](const Project &proj)
+                            { return proj.id == projId; });
+
+        if (it != projects.end())
+        {
+            projects.erase(it, projects.end());
+
+            for (Employee &emp : employees)
+            {
+                if (emp.assignedProjectId == projId)
+                {
+                    emp.assignedProjectId = -1; // Reset to N/A
+                }
+            }
+            cout << green("Project " + to_string(projId) + " deleted successfully and all employees have been unassigned.") << endl;
+        }
+        else
+        {
+            cout << red("Project not found.") << endl;
         }
     }
 };
@@ -1353,17 +1389,17 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
-        cout << "Total Employees: " << employees.size() << endl;
+        cout << blue("Total Employees: ") << employees.size() << endl;
     }
 
     void departmentWiseEmployeeStatistics(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         map<string, int> departmentCounts;
@@ -1377,7 +1413,7 @@ public:
 
         Table table;
         table.add_row({"Department", "Employee Count", "Average Salary"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &pair : departmentCounts)
         {
@@ -1391,12 +1427,12 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
         if (employees.empty())
         {
-            cout << "No employees to calculate salary metrics." << endl;
+            cout << red("No employees to calculate salary metrics.") << endl;
             return;
         }
 
@@ -1415,7 +1451,7 @@ public:
 
         Table table;
         table.add_row({"Metric", "Value"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
         table.add_row({"Average Salary", "$" + to_string_with_precision(employees.empty() ? 0 : totalSalary / employees.size())});
         table.add_row({"Maximum Salary", "$" + to_string_with_precision(maxSalary)});
         table.add_row({"Minimum Salary", "$" + to_string_with_precision(minSalary)});
@@ -1426,10 +1462,10 @@ public:
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
-        cout << "Sort employees by (name, salary, department): ";
+        cout << blue("Sort employees by (name, salary, department): ");
         string sortBy;
         cin >> sortBy;
 
@@ -1450,30 +1486,31 @@ public:
         }
         else
         {
-            cout << "Invalid sort option." << endl;
+            cout << red("Invalid sort option.") << endl;
             return;
         }
 
-        cout << "\nEmployees sorted by " << sortBy << ":" << endl;
+        cout << blue("\nEmployees sorted by ") << sortBy << blue(":") << endl;
         displayAllEmployees(currentUser);
     }
+
     void displayAllEmployees(User *currentUser)
     {
         if (!currentUser || !currentUser->canView())
         {
-            cout << "Permission denied." << endl;
+            cout << red("Permission denied.") << endl;
             return;
         }
-        cout << "\nAll Employees:" << endl;
+        cout << blue("\nAll Employees:") << endl;
         if (employees.empty())
         {
-            cout << "No employees in the system." << endl;
+            cout << red("No employees in the system.") << endl;
             return;
         }
 
         Table table;
         table.add_row({"ID", "Name", "Department", "Position", "Salary", "Status"});
-        table[0].format().font_style({FontStyle::bold});
+        table[0].format().font_style({FontStyle::bold}).font_color(Color::yellow);
 
         for (const auto &emp : employees)
         {
@@ -1483,7 +1520,7 @@ public:
     }
 };
 
-// Main System Class - Orchestrates Feature Classes (Updated)
+// Main System Class - Orchestrates Feature Classes (Updated for Auto-Save)
 class WorkerManagementSystem
 {
 private:
@@ -1509,6 +1546,9 @@ private:
     ProjectManagement projectManagement;
     BusinessIntelligence businessIntelligence;
 
+    // The single data file for the system
+    const string systemDataFile = "worker_data.xlsx";
+
 public:
     WorkerManagementSystem() : currentUser(nullptr),
                                nextEmployeeId(1),
@@ -1523,10 +1563,10 @@ public:
                                businessIntelligence(employees)
     {
         // Attempt to load data on startup
-        loadSystemDataFromFile("worker_data.xlsx");
+        loadSystemDataFromFile();
     }
 
-    void saveSystemDataToFile(const string &filename)
+    void saveSystemDataToFile()
     {
         xlnt::workbook wb;
 
@@ -1572,21 +1612,29 @@ public:
             emp_ws.cell(12, row).value(emp.assignedProjectId);
             row++;
         }
-
-        // Users Sheet (Excel backup)
-        xlnt::worksheet user_ws = wb.create_sheet();
-        user_ws.title("Users");
-        user_ws.cell("A1").value("Username");
-        user_ws.cell("B1").value("Password");
-        user_ws.cell("C1").value("Role");
+        
+        // --- NEW: Attendance Sheet ---
+        xlnt::worksheet att_ws = wb.create_sheet();
+        att_ws.title("Attendance");
+        att_ws.cell("A1").value("EmployeeID");
+        att_ws.cell("B1").value("Year");
+        att_ws.cell("C1").value("Month");
+        att_ws.cell("D1").value("Day");
+        att_ws.cell("E1").value("Present");
         row = 2;
-        for (const auto &user : users)
+        for (const auto &emp : employees)
         {
-            user_ws.cell(1, row).value(user.username);
-            user_ws.cell(2, row).value(user.password);
-            user_ws.cell(3, row).value(user.role);
-            row++;
+            for (const auto &record : emp.attendance)
+            {
+                att_ws.cell(1, row).value(emp.id);
+                att_ws.cell(2, row).value(record.first.year);
+                att_ws.cell(3, row).value(record.first.month);
+                att_ws.cell(4, row).value(record.first.day);
+                att_ws.cell(5, row).value(record.second);
+                row++;
+            }
         }
+
 
         // Clients Sheet
         xlnt::worksheet client_ws = wb.create_sheet();
@@ -1628,19 +1676,19 @@ public:
             row++;
         }
 
-        wb.save(filename);
-        cout << "System data saved to " << filename << " successfully." << endl;
+        wb.save(systemDataFile);
+        // Silently save in the background, or uncomment below for a message.
+        // cout << green("System data auto-saved to ") << systemDataFile << endl;
     }
 
-    void loadSystemDataFromFile(const string &filename)
+    void loadSystemDataFromFile()
     {
         try
         {
             xlnt::workbook wb;
-            wb.load(filename);
+            wb.load(systemDataFile);
 
             employees.clear();
-            // users are loaded from CSV, so we don't clear/load them here
             clients.clear();
             projects.clear();
 
@@ -1667,7 +1715,26 @@ public:
                 employees.push_back(emp);
             }
 
-            // NOTE: Users are now loaded from users.csv, not the Excel file.
+            // --- NEW: Load Attendance ---
+            if(wb.contains("Attendance")){
+                auto att_ws = wb.sheet_by_title("Attendance");
+                for (auto row : att_ws.rows(false)) {
+                    if (row[0].to_string() == "EmployeeID") continue; // Skip header
+
+                    int empId = row[0].value<int>();
+                    Date date = {row[1].value<int>(), row[2].value<int>(), row[3].value<int>()};
+                    bool present = row[4].value<bool>();
+                    
+                    // Find employee and add attendance
+                    for(auto& emp : employees) {
+                        if (emp.id == empId) {
+                            emp.attendance[date] = present;
+                            break;
+                        }
+                    }
+                }
+            }
+
 
             // Clients
             auto client_ws = wb.sheet_by_title("Clients");
@@ -1686,11 +1753,11 @@ public:
                     continue; // Skip header
                 projects.emplace_back(row[0].value<int>(), row[1].to_string(), row[2].to_string(), Date{row[3].value<int>(), row[4].value<int>(), row[5].value<int>()}, row[6].value<int>());
             }
-            cout << "System data loaded from " << filename << " successfully." << endl;
+            cout << green("System data loaded from ") << systemDataFile << green(" successfully.") << endl;
         }
         catch (const xlnt::exception &e)
         {
-            cout << "Note: Could not load " << filename << ". It may not exist yet." << endl;
+            cout << red("Note: Could not load ") << systemDataFile << red(". A new file will be created upon saving.") << endl;
         }
     }
 
@@ -1699,12 +1766,12 @@ public:
         system("cls");
         if (!currentUser)
         {
-            printHeaderStyle3("---|Worker Management System|---");
+            printHeaderStyle3("Welcome to Worker Management System");
             menuLogin();
         }
         else
         {
-            printHeaderStyle3("---|Main Menu|---");
+            printAppLogo();
             menuMain();
         }
     }
@@ -1716,7 +1783,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("Process Management");
+            Process_Management();
             menuPM();
             cin >> choice;
             switch (choice)
@@ -1725,30 +1792,34 @@ public:
                 system("cls");
                 printtHeader("Add New Employee");
                 employeeManagement.addEmployee(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 2:
                 system("cls");
                 printtHeader("Update Employee Details");
                 employeeManagement.updateEmployeeDetails(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 3:
                 system("cls");
                 printtHeader("Delete Employee Record");
                 employeeManagement.deleteEmployeeRecord(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 4:
                 system("cls");
                 printtHeader("Set Hiring Status");
                 employeeManagement.setHiringStatus(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 5:
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                cout << red("Invalid choice. Please try again.") << endl;
             }
         } while (choice != 5);
     }
@@ -1758,7 +1829,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("Resource Management");
+            Resource_Management();
             menuRM();
             cin >> choice;
             switch (choice)
@@ -1767,6 +1838,7 @@ public:
                 system("cls");
                 printHeaderStyle1("Assign Employee to Department");
                 resourceManagement.assignEmployeeToDepartment(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 2:
@@ -1779,6 +1851,7 @@ public:
                 system("cls");
                 printHeaderStyle1("Reassign Employees between Departments");
                 resourceManagement.reassignEmployeesBetweenDepartments(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 4:
@@ -1800,7 +1873,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("Time Management");
+            Time_Management();
             menuTM();
             cin >> choice;
             switch (choice)
@@ -1809,18 +1882,21 @@ public:
                 system("cls");
                 printHeaderStyle1("Record Employee Attendance");
                 timeManagement.recordEmployeeAttendance(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 2:
                 system("cls");
                 printHeaderStyle1("Track Work Hours or Shifts");
                 timeManagement.trackWorkHoursOrShifts(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 3:
                 system("cls");
                 printHeaderStyle1("Manage Leave Balances");
                 timeManagement.manageLeaveBalances(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 4:
@@ -1836,7 +1912,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("Client Relationship Management");
+            Client_Relationship_Management();
             menuCRM();
             cin >> choice;
             switch (choice)
@@ -1845,30 +1921,30 @@ public:
                 system("cls");
                 printHeaderStyle1("Add Client Record");
                 clientRelationshipManagement.addClientRecord(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 2:
                 system("cls");
                 printHeaderStyle1("Assign Employees to Clients/Accounts");
                 clientRelationshipManagement.assignEmployeesToClientsAccounts(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
+
             case 3:
-                system("cls");
-                printHeaderStyle1("Track Client-Specific Projects or Contacts");
-                clientRelationshipManagement.trackClientSpecificProjectsOrContacts(currentUser);
-                pressEnter();
-                break;
-            case 4:
                 system("cls");
                 printHeaderStyle1("View All Clients");
                 clientRelationshipManagement.displayAllClients(currentUser);
                 pressEnter();
                 break;
+            case 4:
+                projectManagementMenu();
+                break;
             case 5:
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                cout << red("Invalid choice. Please try again.") << endl;
             }
         } while (choice != 5);
     }
@@ -1887,12 +1963,14 @@ public:
                 system("cls");
                 printHeaderStyle1("Create Project");
                 projectManagement.createProject(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 2:
                 system("cls");
                 printHeaderStyle1("Assign Employees to Projects");
                 projectManagement.assignEmployeesToProjects(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 3:
@@ -1908,11 +1986,24 @@ public:
                 pressEnter();
                 break;
             case 5:
+                system("cls");
+                printHeaderStyle1("Delete Project");
+                projectManagement.deleteProject(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
+                pressEnter();
+                break;
+            case 6:
+                system("cls");
+                printHeaderStyle1("Track Client-Specific Projects or Contacts");
+                clientRelationshipManagement.trackClientSpecificProjectsOrContacts(currentUser);
+                pressEnter();
+                break;
+            case 7:
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                cout << red("Invalid choice. Please try again.") << endl;
             }
-        } while (choice != 5);
+        } while (choice != 7);
     }
     void businessIntelligenceMenu()
     {
@@ -1920,7 +2011,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("Business Intelligence");
+            Business_Intelligence();
             menuBI();
             cin >> choice;
             switch (choice)
@@ -1947,12 +2038,13 @@ public:
                 system("cls");
                 printHeaderStyle1("Sort Employees");
                 businessIntelligence.sortEmployees(currentUser);
+                saveSystemDataToFile(); // AUTO-SAVE
                 pressEnter();
                 break;
             case 5:
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                cout << red("Invalid choice. Please try again.") << endl;
             }
         } while (choice != 5);
     }
@@ -1962,7 +2054,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("Base System Features");
+            Base_System_Features();
             menuBF();
             cin >> choice;
             switch (choice)
@@ -1986,31 +2078,18 @@ public:
                 pressEnter();
                 break;
             case 4:
-                system("cls");
-                printHeaderStyle1("Save System Data");
-                saveSystemDataToFile("worker_data.xlsx");
-                pressEnter();
-                break;
-            case 5:
-                system("cls");
-                printHeaderStyle1("Load System Data");
-                loadSystemDataFromFile("worker_data.xlsx");
-                pressEnter();
-                break;
-            case 6:
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                cout << red("Invalid choice. Please try again.") << endl;
             }
-        } while (choice != 6);
+        } while (choice != );
     }
 
-    // NEWLY ADDED: User Management Menu for Admins
     void userManagementMenu()
     {
         if (!currentUser || currentUser->role != ADMIN)
         {
-            cout << "Permission Denied. This feature is for Admins only." << endl;
+            cout << red("Permission Denied. This feature is for Admins only.") << endl;
             pressEnter();
             return;
         }
@@ -2019,7 +2098,7 @@ public:
         do
         {
             system("cls");
-            printtHeader("User Management");
+            User_Management();
             menuUM(); // Assumed to exist in header.h to show options
             cin >> choice;
 
@@ -2036,6 +2115,7 @@ public:
                 cin >> newPassword;
                 UserRole newRole = userAuthSystem.selectRole();
                 userAuthSystem.addUser(newUsername, newPassword, newRole);
+                // User auth system auto-saves to CSV, no need to call main save
                 pressEnter();
                 break;
             }
@@ -2072,7 +2152,7 @@ public:
             case 5: // Back to main menu
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                cout << red("Invalid choice. Please try again.") << endl;
                 pressEnter();
             }
 
@@ -2087,7 +2167,7 @@ public:
             showMainMenu();
             if (!(cin >> choice))
             {
-                cout << "Invalid input. Please enter a number." << endl;
+                cout << red("Invalid input. Please enter a number.") << endl;
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 pressEnter();
@@ -2108,28 +2188,25 @@ public:
                     timeManagementMenu();
                     break;
                 case 4:
-                    projectManagementMenu();
-                    break;
-                case 5:
                     clientRelationshipManagementMenu();
                     break;
-                case 6:
+                case 5:
                     businessIntelligenceMenu();
                     break;
-                case 7:
+                case 6:
                     baseSystemFeaturesMenu();
                     break;
-                case 8:
+                case 7:
                     userManagementMenu();
                     break;
-                case 9: // NEW: User Management Menu
+                case 8:
                     userAuthSystem.logout();
                     break;
-                case 10: // UPDATED: Exit
-                    cout << "Exiting Worker Management System. Goodbye!" << endl;
+                case 9:
+                    cout << green("Exiting Worker Management System. Goodbye!") << endl;
                     break;
                 default:
-                    cout << "Invalid choice. Please try again." << endl;
+                    cout << red("Invalid choice. Please try again.") << endl;
                     pressEnter();
                 }
             }
@@ -2151,7 +2228,7 @@ public:
                     pressEnter();
                 }
             }
-        } while ((currentUser && choice != 10) || (!currentUser && choice != 3));
+        } while ((currentUser && choice != 9) || (!currentUser && choice != 3));
     }
 };
 #endif
